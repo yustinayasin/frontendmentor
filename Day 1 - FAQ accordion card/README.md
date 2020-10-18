@@ -4,6 +4,8 @@
 
 ## Welcome! 👋
 
+I only use html and css. I haven't learned css framework (except boostrap) and sass. 
+
 Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
