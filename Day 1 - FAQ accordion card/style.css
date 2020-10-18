@@ -4,6 +4,8 @@ body {
     /* pas engga dispesifikasi heightnya berapa bg color ga keluar karena emang default valuenya 0 jadi mana bisa kelihatan */
     height: 100vh;
     background-image: -webkit-linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;;
 }
 
 .container {
@@ -52,4 +54,30 @@ body {
 
 .faq {
     grid-area: faq;
+    margin: 30px 60px 40px 60px;
+}
+
+.faq h3 {
+    font-size: 30px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+/* tr {
+    margin: 3px;
+    padding: 5px; 
+} */
+
+tr td {
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+    width: 350px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-flex;
+    justify-content: space-between;
 }
