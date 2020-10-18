@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    /* pas engga dispesifikasi heightnya berapa bg color ga keluar karena emang default valuenya 0 jadi mana bisa kelihatan */
     height: 100vh;
     background-image: -webkit-linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
@@ -18,29 +19,35 @@ body {
     background-color: white;
     display: grid;
     grid-template-areas: 'canvas faq';
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 1.35fr 2fr;
 }
 
 .background {
     grid-area: canvas;
-    position: relative;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: 750px 700px;
     background-position: right -200px;
+    overflow: hidden;
+    position: relative;
 }
 
 /* gimana caranya biar sama kek ukuran kek background */
-.background img {
+.background .woman {
     width: 422px;
     height: 309px;
+    /* pas pake absolute jadi keluar tapi pas pake relative enggak ternyata itu pengaruh dari cube */
     position: absolute;
     top: 50px;
-    left: -60px;
+    left: -80px;
 }
 
-.cube {
+.container .cube {
     position: absolute;
+    width: 121px;
+    height: 114px;
+    top: 185px;
+    left: -60px;
 }
 
 .faq {
