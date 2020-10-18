@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: -webkit-linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+    height: 400px;
+    width: 850px;
+    border-radius: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: grid;
+    grid-template-areas: 'canvas faq';
+    grid-template-columns: 1.5fr 2fr;
+}
+
+.background {
+    grid-area: canvas;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 750px 700px;
+    background-position: right -200px;
+}
+
+.cube {
+    position: absolute;
+}
+
+.faq {
+    grid-area: faq;
+}
