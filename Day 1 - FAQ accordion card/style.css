@@ -72,7 +72,6 @@ table {
 } */
 
 tr td {
-    border-bottom: 2px solid hsl(240, 5%, 91%);
     width: 350px;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -88,7 +87,23 @@ tr td {
 table tr td:hover {
     color: hsl(14, 88%, 65%);
 }
+.tambahan {
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+}
 
-#hidden {
+.tambahan img {
+    width: 10px;
+    height: 7px;
+}
+
+.tambahan.active .title{
+    font-weight: bold;
+}
+
+.content {
     display: none;
+}
+
+.tambahan.active .content {
+    display: block;
 }
