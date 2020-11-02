@@ -5,7 +5,7 @@ body {
     height: 100vh;
     background-image: -webkit-linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     font-size: 12px;
-    font-family: 'Kumbh Sans', sans-serif;;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .container {
@@ -125,15 +125,25 @@ table tr td:hover {
 @media screen and (max-width: 799px) {
     .container {
        width: 80%;
-       display: flex;
+       grid-template-areas: 'canvas' 'faq';
+       grid-template-rows: 1em 3em;
     }
 
-    .woman-android {
+    .background .woman-android {
+        display: inline-block;
+    }
 
+    .background .background-android {
+        display: inline-block;
     }
     
     .background {
-        display: none;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: 750px 700px;
+        background-position: right -200px;
+        overflow: hidden;
+        position: relative;
     }
 
     .judul {
