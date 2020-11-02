@@ -46,6 +46,14 @@ body {
     left: -80px;
 }
 
+.background .woman-android {
+    display: none;
+}
+
+.background .background-android {
+    display: none;
+}
+
 .container .cube {
     position: absolute;
     width: 121px;
@@ -117,7 +125,19 @@ table tr td:hover {
 @media screen and (max-width: 799px) {
     .container {
        width: 80%;
-       grid-template-areas: 'faq';
+       display: flex;
+    }
+
+    .woman-android {
+
+    }
+    
+    .background {
+        display: none;
+    }
+
+    .judul {
+        align-items: center;
     }
 
     .container .cube {
@@ -125,13 +145,13 @@ table tr td:hover {
     }
 
     .faq {
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        padding: 0;
         margin: 6px 12px 6px 12px;
     }
 
     table {
-        width: 80%;
+        width: auto;
         padding: 0;
     }
 }
