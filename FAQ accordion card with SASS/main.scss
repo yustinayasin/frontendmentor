@@ -12,16 +12,19 @@ body {
 
 .main-content {
     background-color: white;
-    margin: auto 24px;
+    margin: auto;
     display: flex;
     width: 60%;
-    max-width: 800px;
+    height: auto;
+    // max-width: 800px;
     flex-direction: row;
     border-radius: 32px;
     position: relative;
     box-shadow: 0px 16px 16px 0px #00000066;
     align-self: center;
     justify-content: space-evenly;
+
+
 
     .illustration-box {
         background: url(../images/illustration-box-desktop.svg) no-repeat;
@@ -110,6 +113,54 @@ body {
             .container-item.active .container-content{
                 display: block;
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        margin-top: 100px;
+
+        .illustration-box {
+            display: none;
+        }
+
+        .illustration {
+            height: 40%;
+            width: auto;
+            display: block;
+            overflow: visible;
+
+            .illustration-background {
+                background: url(../images/bg-pattern-mobile.svg) no-repeat;
+                background-size: contain;
+                transform: scale(0.6, 0.6);
+                background-position: center;
+                width: 100%;
+                height: 150px;
+            }
+
+            .illustration-woman {
+                background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+                transform: scale(1.2, 1.2);
+                background-size: contain;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                top: -70px;
+                left: -10px;
+            }
+        }
+
+        .faq {
+            height: 60%;
+            width: auto;
+            margin-bottom: 20px;
+            padding-right: 40px;
+            padding-left: 40px;
         }
     }
 }
