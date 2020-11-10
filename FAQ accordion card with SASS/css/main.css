@@ -140,6 +140,10 @@ body {
   display: block;
 }
 
+.attribution {
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .main-content {
     width: 90%;
