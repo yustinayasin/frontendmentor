@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 15px;
+  font-family: 'spartan';
+}
+
+.background {
+  width: inherit;
+  height: inherit;
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  -webkit-transform: scale(0.1, 0.1), scale(0.7, 0.7);
+          transform: scale(0.1, 0.1), scale(0.7, 0.7);
+  background-position: top left, bottom -100px right 0px;
+}
+/*# sourceMappingURL=main.css.map */
