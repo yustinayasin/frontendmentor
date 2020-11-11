@@ -133,6 +133,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 35px;
 }
 
 .main-content .reviews .review {
@@ -200,7 +201,8 @@ body {
 
 .main-content .reviews .review .review-content {
   color: white;
-  font-weight: 1;
+  line-height: 1.4;
+  font-weight: lighter;
 }
 
 .main-content .reviews .review-dua {

@@ -105,6 +105,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 35px;
 
         .review {
             background-color: hsl(300, 43%, 22%);
@@ -160,7 +161,8 @@ body {
 
             .review-content {
                 color: white;
-                font-weight: 1;
+                line-height: 1.4;
+                font-weight: lighter;
             }
         }
 
