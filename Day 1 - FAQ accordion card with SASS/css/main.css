@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* pas engga dispesifikasi heightnya berapa bg color ga keluar karena emang default valuenya 0 jadi mana bisa kelihatan */
+  height: 100vh;
+  background-image: -webkit-linear-gradient(#af67e9, #6565e7);
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-content {
+  background-color: white;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 32px;
+  position: relative;
+  -webkit-box-shadow: 0px 16px 16px 0px #00000066;
+          box-shadow: 0px 16px 16px 0px #00000066;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main-content .illustration-box {
+  background: url(../images/illustration-box-desktop.svg) no-repeat;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  background-size: 100%;
+  top: 140px;
+  left: -60px;
+  z-index: 1;
+}
+
+.main-content .illustration {
+  width: 40%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-content .illustration .illustration-background {
+  position: relative;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position-x: right;
+  background-position-y: -180px;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content .illustration .illustration-woman {
+  background: url(../images/illustration-woman-online-desktop.svg) no-repeat;
+  position: absolute;
+  background-size: contain;
+  left: -35px;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.main-content .faq {
+  padding: 20px 50px 20px 50px;
+  width: 50%;
+}
+
+.main-content .faq .container .container-item {
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e7e7e9;
+}
+
+.main-content .faq .container .container-item .container-header {
+  padding-top: 12px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-content .faq .container .container-item .container-header .container-arrow {
+  background: url(../images/icon-arrow-down.svg) no-repeat;
+  background-size: 100%;
+  width: 10px;
+  height: 10px;
+}
+
+.main-content .faq .container .container-item .container-content {
+  display: none;
+}
+
+.main-content .faq .container .container-item:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.main-content .faq .container .container-item.active .container-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main-content .faq .container .container-item.active .container-title {
+  font-weight: bold;
+}
+
+.main-content .faq .container .container-item.active .container-content {
+  display: block;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    margin-top: 100px;
+  }
+  .main-content .illustration-box {
+    display: none;
+  }
+  .main-content .illustration {
+    height: 40%;
+    width: auto;
+    display: block;
+    overflow: visible;
+  }
+  .main-content .illustration .illustration-background {
+    background: url(../images/bg-pattern-mobile.svg) no-repeat;
+    background-size: contain;
+    -webkit-transform: scale(0.6, 0.6);
+            transform: scale(0.6, 0.6);
+    background-position: center;
+    width: 100%;
+    height: 150px;
+  }
+  .main-content .illustration .illustration-woman {
+    background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    top: -70px;
+    left: -10px;
+  }
+  .main-content .faq {
+    height: 60%;
+    width: auto;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .main-content .faq .faq-title h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-content">
+    <div class="illustration-box"></div>
+    <div class="illustration">
+      <div class="illustration-background"></div>
+      <div class="illustration-woman"></div>
+    </div>
+    <div class="faq">
+      <div class="faq-title"><h1>FAQ</h1></div>
+      <div class="container">
+        <div class="container-item">
+          <div class="container-header">
+            <div class="container-title">How many team members can I invite?</div>
+            <div class="container-arrow"></div>
+          </div>
+          <div class="container-content">You can invite up to 2 additional users on the Free plan. There is no limit on 
+            team members for the Premium plan.</div>
+        </div>
+        <div class="container-item">
+          <div class="container-header">
+            <div class="container-title">What is the maximum file upload size?</div>
+            <div class="container-arrow"></div>
+          </div>
+          <div class="container-content">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+        </div>
+        <div class="container-item">
+          <div class="container-header">
+            <div class="container-title">How do I reset my password?</div>
+            <div class="container-arrow"></div>
+          </div>
+          <div class="container-content">Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.</div>
+        </div>
+        <div class="container-item">
+          <div class="container-header">
+            <div class="container-title">Can I cancel my subscription?</div>
+            <div class="container-arrow"></div>
+          </div>
+          <div class="container-content">Yes! Send us a message and we’ll process your request no questions asked.</div>
+        </div>
+        <div class="container-item">
+          <div class="container-header">
+            <div class="container-title">Do you provide additional support?</div>
+            <div class="container-arrow"></div>
+          </div>
+          <div class="container-content">Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+
+    function loadText(event){
+      if (event.target.parentNode.classList.contains('active')) {
+        event.currentTarget.classList.remove('active');
+      } else {
+        event.currentTarget.classList.add('active');
+      }
+    }
+
+    window.onload = function () {
+      $('.container-item').on('click', loadText)
+    }
+  </script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="github.com/yustinayasin">Yustina Yasin</a>.
+  </div>
+</body>
+</html>
