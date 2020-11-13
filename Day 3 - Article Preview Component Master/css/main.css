@@ -32,9 +32,14 @@ body main {
 
 body main .images {
   width: 100%;
-  height: 40%;
-  background: url(../images/drawers.jpg) no-repeat;
-  background-size: contain;
+  height: auto;
+}
+
+body main .images img {
+  width: 100%;
+  height: 215px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 body main .description {
@@ -42,7 +47,7 @@ body main .description {
   height: 60%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 40px 30px 40px 30px;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +60,7 @@ body main .description {
 body main .description .description-title, body main .description .description-content {
   margin-top: 5px;
   margin-bottom: 5px;
+  color: #48556a;
 }
 
 body main .description .description-title {
@@ -62,8 +68,13 @@ body main .description .description-title {
   font-weight: 700;
 }
 
+body main .description .description-content {
+  color: #6d7f97;
+  font-size: 15px;
+}
+
 body main .description .description-profile {
-  margin-top: 20px;
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,18 +85,18 @@ body main .description .description-profile {
 }
 
 body main .description .description-profile .profile-photo {
-  width: 30%;
+  width: 15%;
   margin-right: 10px;
 }
 
 body main .description .description-profile .profile-photo img {
   width: 30px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 body main .description .description-profile .profile-container {
-  width: 70%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,8 +104,9 @@ body main .description .description-profile .profile-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body main .description .description-profile .profile-container .profile-content {
@@ -114,10 +126,12 @@ body main .description .description-profile .profile-container .profile-content 
 
 body main .description .description-profile .profile-container .profile-content .profile-name {
   font-weight: 700;
+  color: #48556a;
 }
 
 body main .description .description-profile .profile-container .profile-content .profile-post {
   font-weight: 500;
+  color: #6d7f97;
 }
 
 body main .description .description-profile .profile-container .profile-share {
@@ -125,6 +139,9 @@ body main .description .description-profile .profile-container .profile-share {
   color: #9eafc2;
   border-radius: 5px;
   width: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: inherit;
 }
 
@@ -136,6 +153,7 @@ body main .description .description-profile .profile-sharable {
 }
 
 .attribution {
+  margin-top: 20px;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;

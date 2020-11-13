@@ -21,22 +21,30 @@ body {
 
         .images {
             width: 100%;
-            height: 40%;
-            background: url(../images/drawers.jpg) no-repeat;
-            background-size: contain;
+            height: auto;
+            // background: url(../images/drawers.jpg) no-repeat;
+            // background-size: contain;
+
+            img {
+                width: 100%;
+                height: 215px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
         }
 
         .description {
             width: 100%;
             height: 60%;
             box-sizing: border-box;
-            padding: 40px 30px 40px 30px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
 
             .description-title, .description-content {
                 margin-top: 5px;
                 margin-bottom: 5px;
+                color: hsl(217, 19%, 35%);
             }
 
             .description-title {
@@ -44,27 +52,32 @@ body {
                 font-weight: 700;
             }
 
+            .description-content {
+                color: hsl(214, 17%, 51%);
+                font-size: 15px;
+            }
+
             .description-profile {
-                margin-top: 20px;
+                margin-top: 25px;
                 display: flex;
                 flex-direction: row;
 
                 .profile-photo {
-                    width: 30%;
+                    width: 15%;
                     margin-right: 10px;
                     
                     img {
                         width: 30px;
                         height: 30px;
-                        border-radius: 10px;
+                        border-radius: 20px;
                     }
                 }
 
                 .profile-container {
-                    width: 70%;
+                    width: 85%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-around;
+                    justify-content: space-between;
 
                     .profile-content {
                         width: 80%;
@@ -75,10 +88,12 @@ body {
 
                         .profile-name {
                             font-weight: 700;
+                            color: hsl(217, 19%, 35%);
                         }
 
                         .profile-post {
                             font-weight: 500;
+                            color: hsl(214, 17%, 51%);
                         }
                     }
 
@@ -87,6 +102,7 @@ body {
                         color: hsl(212, 23%, 69%);
                         border-radius: 5px;
                         width: 20%;
+                        align-items: center;
                         height: inherit;
                     }
                 }
@@ -103,6 +119,7 @@ body {
 }
 
 .attribution {
+    margin-top: 20px;
     text-align: center;
     align-items: center;
 }
