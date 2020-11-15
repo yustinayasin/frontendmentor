@@ -6,13 +6,12 @@ body {
     font-size: 13px;
     background-color: hsl(210, 46%, 95%);
     min-height: 100vh;
-    padding: 80px 30px 80px 30px;
+    padding: 40px 30px 0px 30px;
     align-items: center;
 
     main {
-        width: 100%;
-        height: 100%;
         display: flex;
+        position: relative;
         flex-direction: column;
         border-radius: 20px;
         background-color: white;
@@ -35,11 +34,12 @@ body {
 
         .description {
             width: 100%;
-            height: 60%;
+            height: auto;
             box-sizing: border-box;
-            padding: 30px;
+            padding: 30px 30px 15px 30px;
             display: flex;
             flex-direction: column;
+            // position: relative;
 
             .description-title, .description-content {
                 margin-top: 5px;
@@ -64,11 +64,11 @@ body {
 
                 .profile-photo {
                     width: 15%;
-                    margin-right: 10px;
+                    margin-right: 15px;
                     
                     img {
-                        width: 30px;
-                        height: 30px;
+                        width: 45px;
+                        height: 45px;
                         border-radius: 20px;
                     }
                 }
@@ -78,6 +78,7 @@ body {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    align-items: center;
 
                     .profile-content {
                         width: 80%;
@@ -87,6 +88,7 @@ body {
                         box-sizing: border-box;
 
                         .profile-name {
+                            margin-bottom: 5px;
                             font-weight: 700;
                             color: hsl(217, 19%, 35%);
                         }
@@ -97,24 +99,58 @@ body {
                         }
                     }
 
-                    .profile-share {
-                        background: url(../images/icon-share.svg) no-repeat;
-                        color: hsl(212, 23%, 69%);
-                        border-radius: 5px;
-                        width: 20%;
-                        align-items: center;
-                        height: inherit;
-                    }
-                }
+                    .profile-share { //ini div
+                        background-color: hsl(210, 46%, 95%);
+                        border-radius: 40px;
+                        width: 30px;
+                        height: 30px;
+                        z-index: 2;
 
-                .profile-sharable {
-                    border-top-left-radius: 0px;
-                    border-top-right-radius: 0px;
-                    background-color: hsl(217, 19%, 35%);
-                    color: hsl(214, 17%, 51%);
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                            align-content: center;
+
+                             path {
+                                 align-content: center;
+                                 transform: translate(0, -15.674);
+                             }
+                        }
+                    }
                 }
             }
         }
+
+        .callout {
+                background-color: hsl(217, 19%, 35%);
+                //WKWKWK LUPA TERNYA MAIN width 100% height 100% makanya kok sama kek body
+                width: 100%;
+                height: 12%;
+                display: flex;
+                position: absolute;
+                flex-direction: row;
+                bottom: 0;
+                left: 0;
+                color: hsl(214, 17%, 51%);
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                padding: 25px 120px 25px 20px;
+                box-sizing: border-box;
+                justify-content: space-between;
+                visibility: hidden;
+
+                span {
+                    font-size: 13px;
+                    letter-spacing: 5px;
+                    font-weight: 700;
+                }
+
+                .social-media {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
     }
 }
 
