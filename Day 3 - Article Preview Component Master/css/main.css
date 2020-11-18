@@ -137,23 +137,35 @@ body main .description .description-profile .profile-container .profile-content 
   color: #6d7f97;
 }
 
-body main .description .description-profile .profile-container .profile-share {
+body main .description .description-profile .profile-container .profile-share-button {
+  z-index: 2;
+}
+
+body main .description .description-profile .profile-container .profile-share-button .profile-share {
   background-color: #ecf2f8;
   border-radius: 40px;
   width: 30px;
   height: 30px;
-  z-index: 2;
 }
 
-body main .description .description-profile .profile-container .profile-share svg {
+body main .description .description-profile .profile-container .profile-share-button .profile-share svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
 }
 
-body main .description .description-profile .profile-container .profile-share svg path {
+body main .description .description-profile .profile-container .profile-share-button .profile-share svg path {
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-transform: translate(0, -15.674);
@@ -183,7 +195,6 @@ body main .callout {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  visibility: hidden;
 }
 
 body main .callout span {

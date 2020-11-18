@@ -14,7 +14,7 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
   <link rel="stylesheet" href="css/main.css">
-  
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
 <body>
   <main>
@@ -33,15 +33,17 @@
             <div class="profile-name">Michelle Appleton</div>
             <div class="profile-post">28 Jun 2020</div>
           </div>
-          <div class="profile-share">
-            <svg class="icon-share" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#6E8098" d="M 15 6.495 L 8.766 0.014 V 3.88 H 7.441 C 3.33 3.88 0 7.039 0 10.936 v 2.049 l 0.589 -0.612 C 2.59 10.294 5.422 9.11 8.39 9.11 h 0.375 v 3.867 L 15 6.495 Z"></path>
-            </svg>
-          </div>
+          <button id="profileShare" class="profile-share-button">
+            <div class="profile-share">
+              <svg class="icon-share" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#6E8098" d="M 15 6.495 L 8.766 0.014 V 3.88 H 7.441 C 3.33 3.88 0 7.039 0 10.936 v 2.049 l 0.589 -0.612 C 2.59 10.294 5.422 9.11 8.39 9.11 h 0.375 v 3.867 L 15 6.495 Z"></path>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
     </div>
-    <div class="callout">
+    <div class="callout" style="visibility: hidden;">
       <span>SHARE</span>
       <img src="../images/icon-facebook.svg" class="social-media">
       <img src="../images/icon-twitter.svg" class="social-media">
@@ -52,5 +54,25 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Yustina Yasin</a>.
   </div>
+  <script>
+    let callout = document.querySelector('.callout');
+    const share = document.getElementById("profileShare");
+    //kenapa kalo dikasih inline css baru muncul nilainya tapi kalo ga dikasih inline css ga muncul nilainya
+    console.log(callout.style.visibility);
+    console.log("dua");
+    //add event listener cuma buat botton
+
+    profileShare.onclick = function munculkan() {
+      console.log("haha");
+      if (callout.style.visibility == "hidden") {
+        console.log("satu");
+        callout.style.visibility = "visible";
+      } else {
+        console.log("dua");
+        callout.style.visibility = "hidden";
+      }
+    };
+
+  </script>
 </body>
 </html>
