@@ -5,7 +5,16 @@ body {
   font-size: 13px;
   background-color: #ecf2f8;
   min-height: 100vh;
-  padding: 40px 30px 0px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -27,16 +36,19 @@ body main {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 90%;
+  max-width: 350px;
+  height: 50%;
 }
 
-body main .images {
-  width: 100%;
-  height: auto;
-}
-
-body main .images img {
+body main img {
   width: 100%;
   height: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40%;
+  max-height: 200px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -138,20 +150,19 @@ body main .description .description-profile .profile-container .profile-content 
 }
 
 body main .description .description-profile .profile-container .profile-share-button {
+  border-radius: 100%;
+  width: 2.5em;
+  height: 2.5em;
+  border: transparent;
+  cursor: pointer;
+  outline: none;
   z-index: 2;
-}
-
-body main .description .description-profile .profile-container .profile-share-button .profile-share {
   background-color: #ecf2f8;
-  border-radius: 40px;
-  width: 30px;
-  height: 30px;
 }
 
-body main .description .description-profile .profile-container .profile-share-button .profile-share svg {
+body main .description .description-profile .profile-container .profile-share-button svg {
   width: 100%;
   height: 100%;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,11 +176,20 @@ body main .description .description-profile .profile-container .profile-share-bu
       align-content: center;
 }
 
-body main .description .description-profile .profile-container .profile-share-button .profile-share svg path {
+body main .description .description-profile .profile-container .profile-share-button svg path {
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-transform: translate(0, -15.674);
           transform: translate(0, -15.674);
+  z-index: 3;
+}
+
+body main .description .description-profile .profile-container .profile-share-button:hover, body main .description .description-profile .profile-container .profile-share-button:focus {
+  background-color: #6d7f97;
+}
+
+body main .description .description-profile .profile-container .profile-share-button:hover svg path, body main .description .description-profile .profile-container .profile-share-button:focus svg path {
+  background-color: white;
 }
 
 body main .callout {
@@ -214,5 +234,34 @@ body main .callout .social-media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 800px) {
+  body {
+    padding: 0;
+  }
+  body main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 700px;
+    max-width: 700px;
+    height: 300px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body main img {
+    width: 40%;
+    height: 100%;
+    max-height: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+  }
+  body main .description {
+    width: 70%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 /*# sourceMappingURL=main.css.map */
