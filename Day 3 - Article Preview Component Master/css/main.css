@@ -157,32 +157,8 @@ body main .description .description-profile .profile-container .profile-share-bu
   border: transparent;
   cursor: pointer;
   outline: none;
-  z-index: 2;
+  z-index: 1;
   background-color: #ecf2f8;
-}
-
-body main .description .description-profile .profile-container .profile-share-button svg {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-body main .description .description-profile .profile-container .profile-share-button svg path {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-transform: translate(0, -15.674);
-          transform: translate(0, -15.674);
-  z-index: 3;
 }
 
 body main .description .description-profile .profile-container .profile-share-button:hover, body main .description .description-profile .profile-container .profile-share-button:focus {
@@ -190,7 +166,7 @@ body main .description .description-profile .profile-container .profile-share-bu
 }
 
 body main .description .description-profile .profile-container .profile-share-button:hover svg path, body main .description .description-profile .profile-container .profile-share-button:focus svg path {
-  background-color: white;
+  fill: white;
 }
 
 body main .callout {

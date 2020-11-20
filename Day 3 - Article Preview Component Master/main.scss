@@ -120,7 +120,7 @@ body {
                         border: transparent;
                         cursor: pointer;
                         outline: none;
-                        z-index: 2;
+                        z-index: 1;
                         background-color: hsl(210, 46%, 95%);
 
                         // .profile-share { //ini div
@@ -129,33 +129,33 @@ body {
                         //     width: inherit;
                         //     height: inherit;
     
-                            svg {
-                                width: 100%;
-                                height: 100%;
-                                // cursor: pointer;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                align-content: center;
+                            // svg {
+                            //     display: flex;
+                            //     left: 30px;
+                            //     width: 100%;
+                            //     height: 100%;
+                            //     // cursor: pointer;
+                            //     display: flex;
+                            //     justify-content: center;
+                            //     align-items: center;
+                            //     align-content: center;
     
-                                 path {
-                                     align-content: center;
-                                     transform: translate(0, -15.674);
-                                     z-index: 3;
-                                 }
-                            }
+                                //  path {
+                                //      align-content: center;
+                                //      transform: translate(0, -15.674);
+                                //      z-index: 3;
+                                //  }
+                            //}
                         // }
 
                         &:hover, &:focus {
-                            // .profile-share {
-                                background-color: hsl(214, 17%, 51%);
+                            background-color: hsl(214, 17%, 51%);
                                 
-                                svg {
-                                    path {
-                                        background-color: white;
-                                    }
+                            svg {
+                                path {
+                                    fill: white;
                                 }
-                            // }
+                            }
                         }
                     }
                 }
