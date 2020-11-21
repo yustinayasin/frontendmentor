@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap');
 
 body {
-    height: 100vh;
+    //kalo margin ga 0 nanti bakal ada scroll
+    margin: 0;
+    min-height: 100vh;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     color: hsl(240, 18%, 77%);
@@ -12,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
 
     main {
         display: flex;
@@ -21,14 +23,56 @@ body {
         align-items: center;
     
         .background-pattern {
-            display: block;
             position: absolute;
+            top: 50px;
             width: 90%;
-            height: 350px;
+            height: 330px;
+            z-index: -1;
+        }
+
+        .review-navigation {
+            position: absolute;
         }
 
         .review {
-            
+            display: flex;
+            margin-top: 82px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .review-photo {
+                width: 265px;
+                height: 265px;
+                border-radius: 10px;
+            }
+
+            .review-content {
+                margin-top: 60px;
+                text-align: center;
+                padding: 0px 20px 1px 20px;
+                color: hsl(240, 38%, 20%);
+
+                .review-quotes {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .review-description {
+                    font-weight: 100;
+                }
+
+                .reviewer-name {
+                    margin-top: 20px;
+                    font-weight: 700;
+                }
+
+                .reviewer-job {
+                    color: hsl(240, 18%, 77%);
+                    font-weight: 500;
+                }
+            }
         }
     }
 }

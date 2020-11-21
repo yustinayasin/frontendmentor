@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap");
 body {
-  height: 100vh;
+  margin: 0;
+  min-height: 100vh;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   color: #babacf;
@@ -18,9 +19,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body main {
@@ -40,10 +38,65 @@ body main {
 }
 
 body main .background-pattern {
-  display: block;
   position: absolute;
+  top: 50px;
   width: 90%;
-  height: 350px;
+  height: 330px;
+  z-index: -1;
+}
+
+body main .review-navigation {
+  position: absolute;
+}
+
+body main .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 82px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .review .review-photo {
+  width: 265px;
+  height: 265px;
+  border-radius: 10px;
+}
+
+body main .review .review-content {
+  margin-top: 60px;
+  text-align: center;
+  padding: 0px 20px 1px 20px;
+  color: #202046;
+}
+
+body main .review .review-content .review-quotes {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+body main .review .review-content .review-description {
+  font-weight: 100;
+}
+
+body main .review .review-content .reviewer-name {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+body main .review .review-content .reviewer-job {
+  color: #babacf;
+  font-weight: 500;
 }
 
 .attribution {
