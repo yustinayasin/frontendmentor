@@ -47,6 +47,36 @@ body main .background-pattern {
 
 body main .review-navigation {
   position: absolute;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  top: 325px;
+}
+
+body main .review-navigation .navigation-left, body main .review-navigation .navigation-right {
+  width: 50%;
+  height: 100%;
+  border: transparent;
+  cursor: pointer;
+  outline: none;
+  background-color: whitesmoke;
+}
+
+body main .review-navigation .navigation-left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+body main .review-navigation .navigation-right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 body main .review {
@@ -73,16 +103,19 @@ body main .review .review-photo {
 }
 
 body main .review .review-content {
-  margin-top: 60px;
+  margin-top: 90px;
   text-align: center;
   padding: 0px 20px 1px 20px;
   color: #202046;
+  position: relative;
 }
 
 body main .review .review-content .review-quotes {
   position: absolute;
-  width: 50px;
+  width: 60px;
   height: 50px;
+  top: -30px;
+  left: 45%;
 }
 
 body main .review .review-content .review-description {

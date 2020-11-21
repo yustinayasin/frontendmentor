@@ -32,6 +32,31 @@ body {
 
         .review-navigation {
             position: absolute;
+            width: 80px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            top: 325px;
+
+            .navigation-left, .navigation-right {
+                width: 50%;
+                height: 100%;
+                border: transparent;
+                cursor: pointer;
+                outline: none;
+                background-color: whitesmoke;
+            }
+
+            .navigation-left {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            .navigation-right {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
         }
 
         .review {
@@ -48,15 +73,20 @@ body {
             }
 
             .review-content {
-                margin-top: 60px;
+                margin-top: 90px;
                 text-align: center;
                 padding: 0px 20px 1px 20px;
                 color: hsl(240, 38%, 20%);
+                position: relative;
+
 
                 .review-quotes {
+                    //kalo mau gerak berdasarkan parent maka posisi parent harus non static
                     position: absolute;
-                    width: 50px;
+                    width: 60px;
                     height: 50px;
+                    top: -30px;
+                    left: 45%;
                 }
 
                 .review-description {
