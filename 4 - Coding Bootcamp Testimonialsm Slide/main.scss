@@ -21,21 +21,25 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        max-width: 400px;
+        min-width: 350px;
     
         .background-pattern {
             position: absolute;
             top: 50px;
             width: 90%;
             height: 330px;
+            max-width: 360px;
+            min-width: 350px;
             z-index: -1;
         }
 
         .review-navigation {
             position: absolute;
-            width: 80px;
-            height: 40px;
+            width: 110px;
+            height: 50px;
             z-index: 1;
-            border-radius: 20px;
+            border-radius: 25px;
             display: flex;
             flex-direction: row;
             top: 325px;
@@ -142,4 +146,60 @@ body {
     text-align: center;
     bottom: 2px;
     font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: 450px 100px;
+        justify-content: center;
+
+        main {
+            width: 80%;
+            max-width: none;
+            font-size: 32px;
+
+            .background-pattern {
+                max-width: none;
+                min-width: none;
+                width: 550px;
+                height: 550px;
+                top: 50px;
+                right: 80px;
+            }
+
+            .review-navigation {
+                top: auto;
+                bottom: 70px;
+                right: 450px;
+            }
+
+            .review {
+                flex-direction: row-reverse;
+                margin-top: 0;
+
+                .review-photo {
+                    width: 470px;
+                    height: 470px;
+                    margin-left: 20px;
+                }
+
+                .review-content {
+                    margin-top: 0;
+                    padding: 0;
+
+                    .review-description, .reviewer-job, .reviewer-name {
+                        text-align: left;
+                    }
+
+                    .reviewer-name, .reviewer-job {
+                        font-size: 20px;
+                    }
+
+                    .reviewer-name {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
 }
