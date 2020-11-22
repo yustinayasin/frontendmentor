@@ -34,6 +34,7 @@ body {
             position: absolute;
             width: 80px;
             height: 40px;
+            z-index: 1;
             border-radius: 20px;
             display: flex;
             flex-direction: row;
@@ -46,6 +47,10 @@ body {
                 cursor: pointer;
                 outline: none;
                 background-color: whitesmoke;
+
+                &:hover {
+                    background-color: hsl(240, 18%, 77%);
+                }
             }
 
             .navigation-left {
@@ -57,6 +62,8 @@ body {
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
             }
+
+
         }
 
         .review {
@@ -104,6 +111,28 @@ body {
                 }
             }
         }
+
+        .slide1, .slide2 {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .aktif {
+            visibility: visible;
+            position: relative;
+            animation: fadeIn 2s;
+        }
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        // transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        // transform: translateX(0);
+        opacity: 1;
     }
 }
 

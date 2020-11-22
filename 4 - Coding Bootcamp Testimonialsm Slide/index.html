@@ -20,13 +20,13 @@
     <img src="images/pattern-bg.svg" class="background-pattern">
     <div class="review-navigation">
       <button class="navigation-left">
-        <img src="images/icon-prev.svg" alt="" class="prev-arrow">
+        <img src="images/icon-prev.svg" alt="" class="arrow prev-arrow">
       </button>
       <button class="navigation-right">
-        <img src="images/icon-next.svg" alt="" class="next-arrow">
+        <img src="images/icon-next.svg" alt="" class="arrow next-arrow">
       </button>
     </div>
-    <div class="review slide1">
+    <div class="review slide1 aktif">
       <img src="images/image-tanya.jpg" class="review-photo" >
       <div class="review-content">
         <img src="images/pattern-quotes.svg" alt="quote image" class="review-quotes">
@@ -37,34 +37,48 @@
         <div class="reviewer-job">UX Engineer</div>
       </div>
     </div>
-    <!-- <div class="review slide2">
-      <img src="" class="review-photo" >
+    <div class="review slide2">
+      <img src="images/image-john.jpg" class="review-photo" >
       <div class="review-content">
-        <div class="review-description"></div>
-        <div class="reviewer-name"></div>
-        <div class="reviewer-job"></div>
+        <img src="images/pattern-quotes.svg" alt="quote image" class="review-quotes">
+        <div class="review-description">“ If you want to lay the best foundation possible I’d recommend taking this course. 
+          The depth the instructors go into is incredible. I now feel so confident about 
+          starting up as a professional developer. ”</div>
+        <div class="reviewer-name">John Tarkpor</div>
+        <div class="reviewer-job">Junior Front-end Developer</div>
       </div>
-    </div> -->
+    </div>
   </main>
 
-  
-  <!-- “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
-
-  Tanya Sinclair
-  UX Engineer
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
-   -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/yustinayasin">Your Name</a>.
   </div>
+  <script>
+    const prev = document.querySelector(".navigation-left");
+    const next = document.querySelector(".navigation-right");
+    const slide1 = document.querySelector(".slide1");
+    const slide2 = document.querySelector(".slide2");
+
+    prev.addEventListener("click", function() {
+      if(slide1.classList.contains("aktif")) {
+        slide1.classList.remove("aktif");
+        slide2.classList.add("aktif");
+      } else {
+        slide1.classList.add("aktif");
+        slide2.classList.remove("aktif");
+      }
+    });
+
+    next.addEventListener("click", function() {
+      if(slide1.classList.contains("aktif")) {
+        slide1.classList.remove("aktif");
+        slide2.classList.add("aktif");
+      } else {
+        slide1.classList.add("aktif");
+        slide2.classList.remove("aktif");
+      }
+    });
+  </script>
 </body>
 </html>
