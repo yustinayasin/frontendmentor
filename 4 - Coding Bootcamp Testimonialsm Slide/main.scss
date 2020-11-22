@@ -39,7 +39,7 @@ body {
             width: 110px;
             height: 50px;
             z-index: 1;
-            border-radius: 25px;
+            border-radius: 50%;
             display: flex;
             flex-direction: row;
             top: 325px;
@@ -50,7 +50,7 @@ body {
                 border: transparent;
                 cursor: pointer;
                 outline: none;
-                background-color: whitesmoke;
+                background-color: white;
 
                 &:hover {
                     background-color: hsl(240, 18%, 77%);
@@ -81,6 +81,7 @@ body {
                 width: 265px;
                 height: 265px;
                 border-radius: 10px;
+                box-shadow: 0px 20px 20px 0px #00000066;
             }
 
             .review-content {
@@ -104,14 +105,19 @@ body {
                     font-weight: 100;
                 }
 
-                .reviewer-name {
+                .reviewer-container {
+                    display: flex;
+                    flex-direction: column;
                     margin-top: 20px;
-                    font-weight: 700;
-                }
 
-                .reviewer-job {
-                    color: hsl(240, 18%, 77%);
-                    font-weight: 500;
+                    .reviewer-name {
+                        font-weight: 700;
+                    }
+    
+                    .reviewer-job {
+                        color: hsl(240, 18%, 77%);
+                        font-weight: 500;
+                    }
                 }
             }
         }
@@ -148,7 +154,7 @@ body {
     font-size: 12px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
     body {
         background-size: 450px 100px;
         justify-content: center;
@@ -181,22 +187,34 @@ body {
                     width: 470px;
                     height: 470px;
                     margin-left: 20px;
+                    position: relative;
+                    right: 50px;
                 }
 
                 .review-content {
-                    margin-top: 0;
-                    padding: 0;
+                    margin-top: 20px;
+                    left: 50px;
+                    text-align: left;
 
-                    .review-description, .reviewer-job, .reviewer-name {
-                        text-align: left;
+                    .review-quotes {
+                        width: 80px;
+                        height: 70px;
+                        left: 80px;
+                        top: -40px;
                     }
 
-                    .reviewer-name, .reviewer-job {
-                        font-size: 20px;
-                    }
 
-                    .reviewer-name {
+                    .reviewer-container {
+                        flex-direction: row;
                         margin-top: 50px;
+
+                        .reviewer-name, .reviewer-job {
+                            font-size: 20px;
+                        }
+
+                        .reviewer-job {
+                            margin-left: 10px;
+                        }
                     }
                 }
             }
