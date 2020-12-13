@@ -25,24 +25,46 @@
       <div class="content-title"> We're <span> coming soon </span></div>
       <div class="content-description">Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</div>
-      <form action="index.html" method="POST">
+      <form action="#" id="form-email">
         <input type="text" placeholder="Email Address" name="email" id="email">
-        <button class="btn-email"></button>
+        <button class="btn-email">
+          <img src="images/icon-arrow.svg" alt="">
+        </button>
+        <img id="error-icon" src="images/icon-error.svg" class="error error-icon">
+        <p id="error-message" class="error error-message">Please provide a valid email address</p>
       </form>
     </div>
   </main>
-  <!-- We're coming soon
+  <script>
+    const form = document.getElementById("form-email");
+    const email = document.getElementById("email");
+    const errorIcon = document.getElementById("error-icon");
+    const errorMessage = document.getElementById("error-message");
+    
+    form.addEventListener('submit', () => {
+      if (emailIsValid(email)) {
+        validEmail();
+      } else {
+        invalidEmail();
+      }
+    });
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    function invalidEmail() {
+      email.style.border = '2px solid hsl(0, 93%, 68%)';
+      errorIcon.style.visibility= 'visible';
+      errorMessage.style.visibility= 'visible';
+    }
 
-  Email Address -->
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Yustina Yasin</a>.
-    </p>
-  </footer>
+    function validEmail() {
+      emailField.style.border = '1px solid hsl(0, 36%, 70%)';
+      errorIcon.style.visibility= 'hidden';
+      errorMessage.style.visibility= 'hidden';
+    }
+
+    function emailIsValid (email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+    }
+
+  </script>
 </body>
 </html>

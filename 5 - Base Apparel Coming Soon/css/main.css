@@ -58,14 +58,19 @@ body main .content .content-description {
 
 body main .content form {
   margin-top: 25px;
+  position: relative;
+  width: 100%;
 }
 
 body main .content form input {
-  width: inherit;
   border: 0.5px solid #ce9797;
+  width: inherit;
   padding: 5px 10px 5px 25px;
-  height: 35px;
+  height: 45px;
   border-radius: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
   background-color: transparent;
 }
 
@@ -91,6 +96,34 @@ body main .content form ::placeholder {
   color: #ce9797;
   font-size: 15px;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+body main .content form .btn-email {
+  position: absolute;
+  width: 60px;
+  height: 45px;
+  bottom: 32px;
+  right: 0;
+  border: none;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 16px black;
+          box-shadow: 16px black;
+  border-radius: 35px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+
+body main .content form .error-icon {
+  position: absolute;
+  bottom: 42px;
+  right: 70px;
+  visibility: hidden;
+}
+
+body main .content form .error-message {
+  margin-top: 15px;
+  color: #f96262;
+  visibility: hidden;
 }
 
 body footer {
