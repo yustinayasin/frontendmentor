@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(../images/bg-intro-mobile.png) no-repeat;
+  background-size: cover;
+  background-color: #ff7a7a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+main .container-satu .description-title {
+  padding: 0px 30px 0px 30px;
+}
+
+main .container-dua {
+  margin-top: 30px;
+}
+
+main .container-dua .trial-button {
+  background-color: #6055a5;
+  padding: 20px 50px 20px 50px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 7px 0px rgba(62, 60, 73, 0.295);
+          box-shadow: 0px 7px 0px rgba(62, 60, 73, 0.295);
+}
+
+main .container-dua form {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px 25px 20px 25px;
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 7px 0px rgba(62, 60, 73, 0.295);
+          box-shadow: 0px 7px 0px rgba(62, 60, 73, 0.295);
+}
+
+main .container-dua form .input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 0px 15px 15px;
+  outline: none;
+  border-radius: 7px;
+  border-style: solid;
+  margin-bottom: 15px;
+  border-width: 1px;
+}
+
+main .container-dua form #submit-button {
+  background-color: #38cc8c;
+  outline: none;
+  border-radius: 7px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  height: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 0px #2b9c6b;
+          box-shadow: 0px 4px 0px #2b9c6b;
+}
+
+main .container-dua form p {
+  font-size: 12px;
+  margin-top: 20px;
+  color: gray;
+}
+
+main .container-dua form p span {
+  color: #ff7a7a;
+}
+/*# sourceMappingURL=main.css.map */
