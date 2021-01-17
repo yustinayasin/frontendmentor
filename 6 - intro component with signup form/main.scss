@@ -7,81 +7,164 @@ body {
     font-size: 16px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
     background: url(../images/bg-intro-mobile.png) no-repeat;
     background-size: cover;
     background-color: hsl(0, 100%, 74%);
-    align-items: center;
+    display: flex;
     justify-content: center;
-    box-sizing: border-box;
-    padding: 20px;
-    color: white;
-    text-align: center;
+    align-content: center;
 
-    .container-satu {
-
-        .description-title{
-            padding: 0px 30px 0px 30px;
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        max-width: 400px;
+        min-width: 375px;
+    
+        .container-satu {
+    
+            .description-title{
+                padding: 0px 30px 0px 30px;
+            }
+        }
+    
+        .container-dua{
+            margin-top: 30px;
+    
+            .trial-button{
+                background-color: hsl(248, 32%, 49%);
+                padding: 20px 50px 20px 50px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                box-shadow: 0px 7px 0px hsla(249, 10%, 26%, 0.295);
+            }
+    
+            .trial-button:hover{
+                cursor: pointer;
+                background-color: hsl(248, 52%, 64%);
+            }
+    
+            form {
+                margin-top: 30px;
+                background-color: white;
+                padding: 20px 25px 20px 25px;
+                color: black;
+                box-sizing: border-box;
+                border-radius: 10px;
+                font-weight: 500;
+                box-shadow: 0px 7px 0px hsla(249, 10%, 26%, 0.295);
+    
+                .input-container {
+                    margin-top: 15px;
+                    position: relative;
+    
+                    input {
+                        width: 100%;
+                        //oalah box sizing itu ditaro di anaknya bukan parent
+                        box-sizing: border-box;
+                        padding: 15px 0px 15px 15px;
+                        outline: none;
+                        border-radius: 7px;
+                        border-style: solid;
+                        border-width: 1px;
+                    }
+    
+                    .input.invalid {
+                        border: 2px solid hsl(0, 93%, 68%);
+                    }
+        
+                    .icon-error {
+                        position: absolute;
+                        top: 12px;
+                        right: 17px;
+                        display: none;
+                    }
+    
+                    .icon-error.invalid {
+                        display: inline;
+                    }
+    
+                    .error-message {
+                        margin-top: 5px;
+                        color: hsl(0, 100%, 74%);
+                        font-size: 11px;
+                        //kenapa kalo ga dikasih display block jadi gak ke kanan? karena lebar bakal menyesuaikan content
+                        display: none;
+                        text-align: right;
+                        height: 0;
+                        font-style: italic;
+                    }
+        
+                    //pake inline block karena margin block collapse sedangkan inline block kaga
+                    .error-message.invalid {
+                        display: block;
+                        margin-bottom: 25px;
+                    }
+    
+                }
+                
+                #submit-button{
+                    background-color: hsl(154, 59%, 51%);
+                    outline: none;
+                    border-radius: 7px;
+                    border: none;
+                    text-transform: uppercase;
+                    color: white;
+                    margin-top: 15px;
+                    font-weight: 600;
+                    height: 50px;
+                    width: 100%;
+                    box-shadow: 0px 4px 0px  hsl(154, 57%, 39%);
+                }
+                
+                #submit-button:hover{
+                    cursor: pointer;
+                    background-color: hsl(154, 77%, 59%);
+                    box-shadow: 0px 4px 0px  hsl(154, 54%, 49%);
+                }
+    
+                p {
+                    font-size: 12px;
+                    margin-top: 20px;
+                    color: gray;
+    
+                    span {
+                        color: hsl(0, 100%, 74%);
+                    }
+                }
+            }
         }
     }
+}
 
-    .container-dua{
-        margin-top: 30px;
 
-        .trial-button{
-            background-color: hsl(248, 32%, 49%);
-            padding: 20px 50px 20px 50px;
-            border-radius: 10px;
-            box-sizing: border-box;
-            box-shadow: 0px 7px 0px hsla(249, 10%, 26%, 0.295);
-        }
+@media screen and (min-width: 900px) {
+    body {
+        background: url(../images/bg-intro-desktop.png) no-repeat;
+        background-color: hsl(0, 100%, 74%);
+        
 
-        form {
-            margin-top: 30px;
-            background-color: white;
-            padding: 20px 25px 20px 25px;
-            color: black;
-            box-sizing: border-box;
-            border-radius: 10px;
-            font-weight: 500;
-            box-shadow: 0px 7px 0px hsla(249, 10%, 26%, 0.295);
+        main {
+            padding: 0;
+            width: 80%;
+            max-width: none;
+            min-width: 900px;
+            flex-direction: row;
 
-            .input {
-                width: 100%;
-                //oalah box sizing itu ditaro di anaknya bukan parent
+            .container-satu{
+                width: 60%;
                 box-sizing: border-box;
-                padding: 15px 0px 15px 15px;
-                outline: none;
-                border-radius: 7px;
-                border-style: solid;
-                margin-bottom: 15px;
-                border-width: 1px;
-            }
+                padding-right: 100px;
+                text-align: left;
 
-            #submit-button{
-                background-color: hsl(154, 59%, 51%);
-                outline: none;
-                border-radius: 7px;
-                border: none;
-                text-transform: uppercase;
-                color: white;
-                font-weight: 600;
-                height: 50px;
-                width: 100%;
-                box-shadow: 0px 4px 0px  hsl(154, 57%, 39%);
-            }
-            
-            p {
-                font-size: 12px;
-                margin-top: 20px;
-                color: gray;
-
-                span {
-                    color: hsl(0, 100%, 74%);
+                .description-title {
+                    padding: 0;
+                    font-size: 30px;
                 }
             }
         }

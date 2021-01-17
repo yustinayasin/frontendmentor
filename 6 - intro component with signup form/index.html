@@ -17,6 +17,7 @@
 </head>
 <body>
   <main>
+    <!-- pake div 2 karena mau buat flex -->
     <div class="container-satu">
       <div class="description-title"><h2>Learn to code by watching others</h2></div>
       <div class="description-content">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
@@ -24,37 +25,77 @@
     </div>
     <div class="container-dua">
       <div class="trial-button"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
-      <form action="">
-        <input type="text" id="first-name" placeholder="First Name" class="input">
-        <input type="text" id="last-name" placeholder="Last Name" class="input">
-        <input type="text" id="email" placeholder="Email Address" class="input">
-        <input type="text" id="password" placeholder="Password" class="input">
+      <form id="form">
+        <!-- kenapa di dalam form ada div buat input? biar top error icon ga berubah ketika error message muncul -->
+        <div class="input-container">
+          <input type="text" id="first-name" placeholder="First Name" class="input">
+          <img src="images/icon-error.svg" class="icon-error" alt="icon-error">
+          <span class="error-message">First Name cannot be empty</span>
+        </div>
+        <div class="input-container">
+          <input type="text" id="last-name" placeholder="Last Name" class="input">
+          <img src="images/icon-error.svg" class="icon-error" alt="icon-error">
+          <span class="error-message">Last Name cannot be empty</span>
+        </div>
+        <div class="input-container">
+          <input type="text" id="email" placeholder="Email Address" class="input input-email">
+          <img src="images/icon-error.svg" class="icon-error" alt="icon-error">
+          <span class="error-message">Looks like this is not an email</span>
+        </div>
+        <div class="input-container">
+          <input type="text" id="password" placeholder="Password" class="input">
+          <img src="images/icon-error.svg" class="icon-error" alt="icon-error">
+          <span class="error-message">Password cannot be empty</span>
+        </div>
         <button type="submit" id="submit-button">Claim Your Free Trial</button>
         <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </form>
     </div>
   </main>
-  <!-- Learn to code by watching others
+  <script>
+    //vanilla javascript
+    const form = document.getElementById('form');
+    const iconError = document.querySelectorAll('.icon-error');
+    const errorMessage = document.querySelectorAll('.error-message');
+    const inputs = document.querySelectorAll('.input');
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    function emailIsValid (email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+    }
 
-  Try it free 7 days then $20/mo. thereafter
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      invalidInput();
+    });
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+    function invalidInput(){
+      inputs.forEach(function(input, index){
+        if(input.value === '') {
+          invalid(input, index);
+        } else {
+          valid(input, index);
+        }
 
-  Claim your free trial 
+        if(input.classList.contains('input-email')){
+          if(!emailIsValid(input)){
+            invalid(input, index);
+          }
+        }
+      });
+    }
 
-  By clicking the button, you are agreeing to our Terms and Services -->
-  
-  <!-- <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer> -->
+    function invalid(input, index) {
+      iconError[index].classList.add('invalid');
+      errorMessage[index].classList.add('invalid');
+      input.classList.add('invalid');
+    }
+
+    function valid(input, index){
+      iconError[index].classList.remove('invalid');
+      errorMessage[index].classList.remove('invalid');
+      input.classList.remove('invalid');
+    }
+    
+  </script>
 </body>
 </html>

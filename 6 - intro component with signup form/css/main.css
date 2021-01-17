@@ -7,9 +7,20 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  background: url(../images/bg-intro-mobile.png) no-repeat;
+  background-size: cover;
+  background-color: #ff7a7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-main {
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,9 +28,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url(../images/bg-intro-mobile.png) no-repeat;
-  background-size: cover;
-  background-color: #ff7a7a;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -31,17 +39,19 @@ main {
   padding: 20px;
   color: white;
   text-align: center;
+  max-width: 400px;
+  min-width: 375px;
 }
 
-main .container-satu .description-title {
+body main .container-satu .description-title {
   padding: 0px 30px 0px 30px;
 }
 
-main .container-dua {
+body main .container-dua {
   margin-top: 30px;
 }
 
-main .container-dua .trial-button {
+body main .container-dua .trial-button {
   background-color: #6055a5;
   padding: 20px 50px 20px 50px;
   border-radius: 10px;
@@ -51,7 +61,12 @@ main .container-dua .trial-button {
           box-shadow: 0px 7px 0px rgba(62, 60, 73, 0.295);
 }
 
-main .container-dua form {
+body main .container-dua .trial-button:hover {
+  cursor: pointer;
+  background-color: #8073d3;
+}
+
+body main .container-dua form {
   margin-top: 30px;
   background-color: white;
   padding: 20px 25px 20px 25px;
@@ -64,7 +79,12 @@ main .container-dua form {
           box-shadow: 0px 7px 0px rgba(62, 60, 73, 0.295);
 }
 
-main .container-dua form .input {
+body main .container-dua form .input-container {
+  margin-top: 15px;
+  position: relative;
+}
+
+body main .container-dua form .input-container input {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -72,17 +92,47 @@ main .container-dua form .input {
   outline: none;
   border-radius: 7px;
   border-style: solid;
-  margin-bottom: 15px;
   border-width: 1px;
 }
 
-main .container-dua form #submit-button {
+body main .container-dua form .input-container .input.invalid {
+  border: 2px solid #f96262;
+}
+
+body main .container-dua form .input-container .icon-error {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  display: none;
+}
+
+body main .container-dua form .input-container .icon-error.invalid {
+  display: inline;
+}
+
+body main .container-dua form .input-container .error-message {
+  margin-top: 5px;
+  color: #ff7a7a;
+  font-size: 11px;
+  display: none;
+  text-align: right;
+  height: 0;
+  font-style: italic;
+}
+
+body main .container-dua form .input-container .error-message.invalid {
+  display: block;
+  margin-bottom: 25px;
+}
+
+body main .container-dua form #submit-button {
   background-color: #38cc8c;
   outline: none;
   border-radius: 7px;
   border: none;
   text-transform: uppercase;
   color: white;
+  margin-top: 15px;
   font-weight: 600;
   height: 50px;
   width: 100%;
@@ -90,13 +140,48 @@ main .container-dua form #submit-button {
           box-shadow: 0px 4px 0px #2b9c6b;
 }
 
-main .container-dua form p {
+body main .container-dua form #submit-button:hover {
+  cursor: pointer;
+  background-color: #46e7a1;
+  -webkit-box-shadow: 0px 4px 0px #39c086;
+          box-shadow: 0px 4px 0px #39c086;
+}
+
+body main .container-dua form p {
   font-size: 12px;
   margin-top: 20px;
   color: gray;
 }
 
-main .container-dua form p span {
+body main .container-dua form p span {
   color: #ff7a7a;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background: url(../images/bg-intro-desktop.png) no-repeat;
+    background-color: #ff7a7a;
+  }
+  body main {
+    padding: 0;
+    width: 80%;
+    max-width: none;
+    min-width: 900px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main .container-satu {
+    width: 60%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 100px;
+    text-align: left;
+  }
+  body main .container-satu .description-title {
+    padding: 0;
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
