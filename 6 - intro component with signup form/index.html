@@ -60,7 +60,13 @@
     const inputs = document.querySelectorAll('.input');
 
     function emailIsValid (email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+      //\s untuk white space
+      //^[^\s@]+ artinya tidak diawali dengan, + artinya 1 atau lebih
+      //@ 
+      //[^\s@]+ selain spasi dan @
+      //\. dot pada email
+      //$ end of input
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
     }
 
     form.addEventListener('submit', (e) => {
