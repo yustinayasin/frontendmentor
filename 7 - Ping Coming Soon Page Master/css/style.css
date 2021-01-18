@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap');
+
+:root {
+    /* primary color */
+    --primary-color: hsl(223, 87%, 63%);
+    --primary-color-light: hsl(223, 90%, 72%);
+    /* secondary color */
+    --secondary-color-pale: hsl(223, 100%, 88%);
+    --secondary-color-light: hsl(354, 100%, 66%);
+    /* neutral */
+    --neutral-color: hsl(0, 0%, 59%);
+    --neutral-color-dark: hsl(209, 33%, 12%);
+    /* typography */
+    --font-size-medium: 20px;
+    --font-size-small: 15px;
+    --font-size-large: 30px;
+    --ff-primary: 'Libre Franklin', sans-serif;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size-medium);
+    font-family: var(--ff-primary);
+    min-width: 375px;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 50px 20px 0px 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+span {
+    font-weight: 700;
+}
+
+#subscribe {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 45px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    width: 100%;
+    /* kenapa padding ga dimasukin ke placeholder? karena nanti input textnya ga ngikutin padding */
+    padding: 10px 0 10px 30px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+}
+
+input.invalid {
+    margin-bottom: 10px;
+    border: 1px solid var(--secondary-color-light);
+}
+
+input::placeholder {
+    color: var(--primary-color);
+    font-size: var(--font-size-small);
+}
+
+#error-message {
+    color: var(--secondary-color-light);
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#error-message.invalid {
+    display: block;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    height: 45px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    box-shadow: 0px 8px 15px hsla(223, 87%, 63%, 0.5);
+    margin-bottom: 40px;
+    transition: all 0.1s ease 0s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#graph-photo {
+    position: relative;
+    height: 200px;
+}
+
+.copyright, footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.sosmed {
+    display: flex;
+    padding: 0px 40px 0px 40px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.sosmed-container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    color: var(--primary-color);
+    border: 1px solid hsla(223, 87%, 63%, 0.5);
+}
+
+.fab {
+    transform: scale(0.7);
+}
+
+@media screen and (min-width: 900px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-large);
+    }
+
+    main {
+        width: 60%;
+        margin: 30px 0px 0px 0px;
+    }
+
+    form {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .input-container {
+        width: 65%;
+    }
+
+    #error-message {
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    input, button{
+        margin: 30px 0px 30px 0px;
+    }
+
+    input{
+        padding-right: 15px;
+    }
+
+    button {
+        width: 30%;
+    }
+
+    #graph-photo {
+        width: 100%;
+        height: 50%;
+    }
+}
