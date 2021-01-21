@@ -1,0 +1,21 @@
+@import 'mixins';
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-body;
+    font-size: 14px;
+    @include flexdisplay();
+    color: $color-dark-cyan;
+}
+
+h1, h2, h4 {
+    font-family: $font-headings;
+    font-weight: 700;
+}

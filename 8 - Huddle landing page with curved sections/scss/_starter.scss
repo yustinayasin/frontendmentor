@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.starter {
+    @include flexdisplay();
+    text-align: center;
+    padding: 30px;
+
+    & &__description{
+        margin-top: 20px;
+    }
+
+    @at-root #{&}__illustration {
+        margin-top: 50px;
+        width: 90%;
+    }
+
+    @at-root #{&}__btn {
+        @include btn(160px, 2px solid $color-primary-pink, 25px, $color-primary-pink, white);
+        height: 40px;
+        margin-top: 30px;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+    }
+
+    @at-root #{&}__btn:hover {
+        @include btn(160px, 2px solid $color-primary-pink, 25px, white, $color-primary-pink);
+    }
+}

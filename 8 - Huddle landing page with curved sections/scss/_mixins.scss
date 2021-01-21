@@ -1,0 +1,26 @@
+@mixin flexdisplay($flex_direction:column, $justify:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $flex_direction;
+}
+
+@mixin btn($width, $border, $radius, $bg, $color){
+    width: $width;
+    border: $border;
+    border-radius: $radius;
+    outline: none;
+    cursor: pointer;
+    background-color: $bg;
+    color: $color;
+}
+
+@mixin background($height: 10%){
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: $height;
+    left: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,91 @@
+@import 'mixins';
+
+main {
+    @include flexdisplay(column, flex-start);
+
+    .count {
+        img {
+            width: 30px;
+            height: 25px;
+        }
+
+        h1 {
+            color: $color-dark-cyan;
+            font-size: 2.6rem;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        @at-root #{&}__message {
+            margin-top: 50px;
+        }
+    }
+
+    .grow, .conversations, .users {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .grow, .conversations, .users {
+        img {
+            width: 80%;
+        }
+
+        h3 {
+            margin-top: 40px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    }
+
+    .users, .grow {
+        background-color: $color-pale-blue;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        position: relative;
+    }
+
+    .action {
+        @include flexdisplay();
+        text-align: center;
+
+        @at-root #{&}__btn {
+            @include btn(160px, 2px solid $color-primary-pink, 25px, $color-primary-pink, white);
+            height: 40px;
+            margin-top: 30px;
+            box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+        }
+
+        @at-root #{&}__btn:hover {
+            @include btn(160px, 2px solid $color-primary-pink, 25px, white, $color-primary-pink);
+        }
+    }
+
+    .users::after {
+        @include background(25%);
+        bottom: -100px;
+        background: url(../images/bg-section-bottom-mobile-2.svg) no-repeat;
+    }
+
+    .users::before {
+        @include background(25%);
+        top: -100px;
+        background: url(../images/bg-section-top-mobile-2.svg) no-repeat;
+    }
+
+    .grow::after {
+        @include background(25%);
+        bottom: -100px;
+        background: url(../images/bg-section-bottom-mobile-1.svg) no-repeat;
+    }
+
+    .grow::before {
+        @include background(25%);
+        top: -100px;
+        background: url(../images/bg-section-top-mobile-1.svg) no-repeat;
+    }
+}

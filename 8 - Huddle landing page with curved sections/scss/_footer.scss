@@ -1,0 +1,88 @@
+@import 'mixins';
+
+.footer {
+    margin-top: 150px;
+    padding: 30px;
+    background-color: $color-dark-cyan;
+    color: white;
+    position: relative;
+
+    @at-root #{&}__newsletter {
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        p, form {
+            margin-top: 20px;
+        }
+
+        form {
+            @include flexdisplay(column, flex-end);
+            align-items: flex-end;
+            margin-bottom: 20px;
+
+            input {
+                width: 100%;
+                height: 40px;
+                border: 1px solid $color-primary-pink;
+                border-radius: 7px;
+                outline: none;
+            }
+
+            button {
+                @include btn(100px, 2px solid $color-primary-pink, 7px, $color-primary-pink, white);
+                height: 40px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @at-root #{&}__contact {
+        .logo, .phone, .email {
+            @include flexdisplay(row, flex-start);
+            margin-bottom: 10px;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+
+        .description {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.footer::before {
+    @include background();
+    top: -50px;
+    background: url(../images/bg-footer-top-mobile.svg) no-repeat;
+}
+
+.sosmed {
+    @include flexdisplay(row, flex-start);
+    margin-top: 20px;
+
+    & &__container {
+        @include flexdisplay();
+        background-color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .fa-facebook-f::before, .fa-twitter::before {
+        font-size: 20px;
+    }
+
+    .fa-instagram::before {
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+    .fa-facebook-f::before, .fa-twitter::before {
+        color: $color-dark-cyan;
+    }
+}
