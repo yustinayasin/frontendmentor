@@ -26,11 +26,18 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #00252e;
+  max-width: 375px;
 }
 
 h1, h2, h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
+}
+
+@media only screen and (min-width: 1250px) {
+  body {
+    max-width: none;
+  }
 }
 
 .header {
@@ -80,7 +87,7 @@ h1, h2, h4 {
   height: 30px;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1250px) {
   .header {
     padding: 50px;
   }
@@ -140,7 +147,7 @@ h1, h2, h4 {
   color: #ff52bf;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1250px) {
   .starter {
     padding: 80px;
   }
@@ -304,7 +311,7 @@ main .grow::before {
   background: url(../images/bg-section-top-mobile-1.svg) no-repeat;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1250px) {
   main .count {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -577,7 +584,7 @@ main .grow::before {
   background: url(../images/bg-footer-top-mobile.svg) no-repeat;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1250px) {
   .footer {
     display: -webkit-box;
     display: -ms-flexbox;

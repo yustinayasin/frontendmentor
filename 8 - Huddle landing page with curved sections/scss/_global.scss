@@ -13,9 +13,16 @@ body {
     font-size: 14px;
     @include flexdisplay();
     color: $color-dark-cyan;
+    max-width: 375px;
 }
 
 h1, h2, h4 {
     font-family: $font-headings;
     font-weight: 700;
+}
+
+@media only screen and (min-width: 1250px) {
+    body {
+        max-width: none;
+    }
 }

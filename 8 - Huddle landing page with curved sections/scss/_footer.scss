@@ -87,7 +87,7 @@
     background: url(../images/bg-footer-top-mobile.svg) no-repeat;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1250px) {
     .footer {
         @include flexdisplay(row-reverse, center);
         padding: 80px 80px 50px 80px;
