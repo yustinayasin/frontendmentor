@@ -51,6 +51,33 @@
         .description {
             margin-bottom: 40px;
         }
+
+        .sosmed {
+            @include flexdisplay(row, flex-start);
+            margin-top: 20px;
+        
+            .container {
+                @include flexdisplay();
+                background-color: white;
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+        
+            .fa-facebook-f::before, .fa-twitter::before {
+                font-size: 20px;
+            }
+        
+            .fa-instagram::before {
+                margin-right: 10px;
+                font-size: 25px;
+            }
+        
+            .fa-facebook-f::before, .fa-twitter::before {
+                color: $color-dark-cyan;
+            }
+        }
     }
 }
 
@@ -60,29 +87,38 @@
     background: url(../images/bg-footer-top-mobile.svg) no-repeat;
 }
 
-.sosmed {
-    @include flexdisplay(row, flex-start);
-    margin-top: 20px;
+@media only screen and (min-width: 1440px) {
+    .footer {
+        @include flexdisplay(row-reverse, center);
+        padding: 80px 80px 50px 80px;
+        align-items: flex-start;
+        margin-top: 300px;
 
-    & &__container {
-        @include flexdisplay();
-        background-color: white;
-        width: 25px;
-        height: 25px;
-        border-radius: 5px;
-        margin-right: 10px;
+        @at-root #{&}__contact {
+            width: 60%;
+            padding-right: 150px;
+        }
+
+        @at-root #{&}__newsletter {
+            padding-left: 80px;
+            form {
+                @include flexdisplay(row, center);
+
+                button {
+                    margin-top: 0px;
+                }
+
+                input {
+                    margin-right: 30px;
+                }
+            }
+        }
+
     }
 
-    .fa-facebook-f::before, .fa-twitter::before {
-        font-size: 20px;
-    }
-
-    .fa-instagram::before {
-        margin-right: 10px;
-        font-size: 25px;
-    }
-
-    .fa-facebook-f::before, .fa-twitter::before {
-        color: $color-dark-cyan;
+    .footer::before {
+        @include background(45%);
+        top: -150px;
+        background: url(../images/bg-footer-top-desktop.svg) no-repeat;
     }
 }

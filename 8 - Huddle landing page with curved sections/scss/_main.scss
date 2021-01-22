@@ -44,8 +44,7 @@ main {
 
     .users, .grow {
         background-color: $color-pale-blue;
-        margin-top: 150px;
-        margin-bottom: 150px;
+        margin: 150px 0px 150px 0px;
         position: relative;
     }
 
@@ -87,5 +86,98 @@ main {
         @include background(25%);
         top: -100px;
         background: url(../images/bg-section-top-mobile-1.svg) no-repeat;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    main {
+        .count {
+            @include flexdisplay(row, space-between);
+            width: 100%;
+            padding: 0px 180px 0px 180px;
+
+            @at-root #{&}__message {
+                margin-top: 0px;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            img {
+                width: 30%;
+                height: 30%;
+            }
+        }
+
+        .grow, .users {
+            @include flexdisplay(row-reverse, center);
+            margin: 200px 0px 200px 0px;
+        }
+
+        .grow {
+            @at-root #{&}__container {
+                margin-right: 200px;
+            }
+        }
+
+        .users {
+            @at-root #{&}__container {
+                margin-right: 200px;
+            }
+        }
+
+        .conversations {
+            @include flexdisplay(row, center);
+
+            img {
+                margin-right: 200px;
+            }
+        }
+
+        .grow, .users, .conversations {
+            text-align: left;
+            padding: 40px 90px 40px 90px;
+
+            h3 {
+                margin-top: 0px;
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            img {
+                width: 40%;
+            }
+        }
+
+        .users::after {
+            @include background(40%);
+            bottom: -155px;
+            background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat;
+        }
+    
+        .users::before {
+            @include background(40%);
+            top: -140px;
+            background: url(../images/bg-section-top-desktop-2.svg) no-repeat;
+        }
+    
+        .grow::after {
+            @include background(40%);
+            bottom: -155px;
+            background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat;
+        }
+    
+        .grow::before {
+            @include background(40%);
+            top: -140px;
+            background: url(../images/bg-section-top-desktop-1.svg) no-repeat;
+        }
+
+        .action {
+            @at-root #{&}__title {
+                font-size: 35px;
+            }
+        }
     }
 }

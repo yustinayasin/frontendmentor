@@ -25,3 +25,24 @@
         @include btn(160px, 2px solid $color-primary-pink, 25px, white, $color-primary-pink);
     }
 }
+
+@media only screen and (min-width:1440px) {
+    .starter {
+        padding: 80px;
+        @at-root #{&}__title {
+            font-size: 35px;
+        }
+
+        @at-root #{&}__description {
+            margin: 30px 300px 30px 300px;
+        }
+
+        @at-root #{&}__illustration {
+            width: 80%;
+        }
+
+        @at-root #{&}__btn {
+            margin: 0px 0px 30px 0px;
+        }
+    }
+}
