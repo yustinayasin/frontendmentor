@@ -26,18 +26,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #00252e;
-  max-width: 375px;
+  min-width: 375px;
 }
 
 h1, h2, h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-}
-
-@media only screen and (min-width: 1250px) {
-  body {
-    max-width: none;
-  }
 }
 
 .header {

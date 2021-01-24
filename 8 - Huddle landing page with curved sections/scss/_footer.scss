@@ -87,6 +87,7 @@
     background: url(../images/bg-footer-top-mobile.svg) no-repeat;
 }
 
+// ada dua desain yang pertama ukuran 375px sama 1440px tapi laptopku lebar ga nyampe 1440px
 @media only screen and (min-width: 1250px) {
     .footer {
         @include flexdisplay(row-reverse, center);

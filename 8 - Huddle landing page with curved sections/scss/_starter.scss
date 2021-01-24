@@ -5,6 +5,7 @@
     text-align: center;
     padding: 30px;
 
+    //seleksi penamaan BEM, ga tau kadang ini bisa kadang harus pake yang  @at-root #{&}__
     & &__description{
         margin-top: 20px;
     }

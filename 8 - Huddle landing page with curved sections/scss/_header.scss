@@ -4,7 +4,8 @@
     @include flexdisplay(row, space-between);
     padding: 20px;
     width: 100%;
-
+    
+    //seleksi penamaan BEM header__logo
     @at-root #{&}__logo {
         img {
             width: 50%;
