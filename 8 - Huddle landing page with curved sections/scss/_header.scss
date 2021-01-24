@@ -13,16 +13,13 @@
         }
     }
 
-    @at-root #{&}__btn {
-        @include btn(20px, 2px solid $color-primary-pink, 20px, white, $color-primary-pink);
-        width: 80px;
+    & &__btn {
+        @include btn(80px, 2px solid $color-primary-pink, 20px, white, $color-primary-pink);
         height: 30px;
     }
 
-    @at-root #{&}__btn:hover {
-        @include btn(20px, 2px solid $color-primary-pink, 20px, $color-primary-pink, white);
-        width: 80px;
-        height: 30px;
+    & &__btn:hover {
+        @include btn(80px, 2px solid $color-primary-pink, 20px, $color-primary-pink, white);
     }
 }
 

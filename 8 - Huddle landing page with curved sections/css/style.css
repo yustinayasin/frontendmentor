@@ -57,28 +57,25 @@ h1, h2, h4 {
   height: 100%;
 }
 
-.header__btn {
-  width: 20px;
+.header .header__btn {
+  width: 80px;
   border: 2px solid #ff52bf;
   border-radius: 20px;
   outline: none;
   cursor: pointer;
   background-color: white;
   color: #ff52bf;
-  width: 80px;
   height: 30px;
 }
 
-.header__btn:hover {
-  width: 20px;
+.header .header__btn:hover {
+  width: 80px;
   border: 2px solid #ff52bf;
   border-radius: 20px;
   outline: none;
   cursor: pointer;
   background-color: #ff52bf;
   color: white;
-  width: 80px;
-  height: 30px;
 }
 
 @media only screen and (min-width: 1250px) {
