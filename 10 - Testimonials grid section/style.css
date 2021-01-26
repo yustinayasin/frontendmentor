@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    /* color */
+    --color-moderate-violet: hsl(263, 55%, 52%);
+    --color-dark-grayish: hsl(217, 19%, 35%);
+    --color-blackish-blue: hsl(219, 29%, 14%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-gray: hsl(0, 0%, 81%);
+    --color-light-grayish: hsl(210, 46%, 95%);
+    /* typography */
+    --font-size: 13px;
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-grayish);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "first" "second" "third" "fourth" "fifth";
+    margin: 1.5rem;
+    gap: 1rem 0px;
+}
+
+.testimonial {
+    padding: 2rem;
+    text-align: left;
+    border-radius: 0.8rem;
+    z-index: -2;
+}
+
+.photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 8px;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    z-index: -1;
+}
+
+.identity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.first-testimonial {
+    background-color: var(--color-moderate-violet);
+    grid-area: first;
+    position: relative;
+}
+
+.second-testimonial {
+    background-color: var(--color-dark-grayish);
+    grid-area: second;
+}
+
+.third-testimonial, .fifth-testimonial {
+    background-color: var(--color-white);
+}
+
+.fourth-testimonial {
+    background-color: var(--color-blackish-blue);
+    grid-area: fourth;
+}
+
+.third-testimonial {
+    grid-area: third;
+}
+
+.fifth-testimonial {
+    grid-area: fifth;
+}
+
+.first-testimonial h2, 
+.second-testimonial h2,
+.fourth-testimonial h2 {
+    color: var(--color-white);
+}
+
+.third-testimonial h2,
+.fifth-testimonial h2 {
+    color: var(--color-dark-grayish);
+}
+
+.first-testimonial .full-name, 
+.second-testimonial .full-name,
+.fourth-testimonial .full-name {
+    color: var(--color-white);
+}
+
+.third-testimonial .full-name,
+.fifth-testimonial .full-name {
+    color: var(--color-blackish-blue);
+}
+
+.first-testimonial .status, 
+.second-testimonial .status,
+.fourth-testimonial .status {
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.third-testimonial .status,
+.fifth-testimonial .status {
+    color: hsla(219, 29%, 14%, 0.5);
+}
+
+.first-testimonial .description, 
+.second-testimonial .description,
+.fourth-testimonial .description {
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.third-testimonial .description,
+.fifth-testimonial .description {
+    color: hsla(219, 29%, 14%, 0.7);
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    main {
+        gap: 1rem 1rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr, 1fr;
+        width: 80%;
+        height: 70%;
+        grid-template-areas: "first first second fifth" "third fourth fourth fifth";
+    }
+}
+
+
+
