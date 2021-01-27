@@ -1,0 +1,30 @@
+@mixin display-flex($justify: center, $align: center, $direction:column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin display-grid($gap: 10px, $columns: auto, $rows: auto){
+    display: grid;
+    gap: $gap;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+@mixin btn($width: 80%, $height: 2.5rem){
+    color: white;
+    background-color: $bright-blue;
+    border-radius: 5px;
+    width: $width;
+    height: $height;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin email-input($width: 80%, $height: 2.5rem) {
+    width: $width;
+    height: $height;
+    outline: none;
+}

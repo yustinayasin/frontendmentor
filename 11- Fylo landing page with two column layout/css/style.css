@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, a, button {
+  font-family: "Raleway", sans-serif;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 15px;
+}
+
+.header img {
+  width: 5rem;
+}
+
+.header .menu {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .menu p {
+  cursor: pointer;
+}
+
+.header .menu p:hover {
+  color: #3065f8;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    padding: 50px;
+  }
+  .header img {
+    width: 8rem;
+  }
+  .header .menu {
+    width: 25%;
+  }
+}
+
+main .introduction {
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "illustration" "content";
+  margin: 50px 25px 120px 25px;
+  color: #070439;
+}
+
+main .introduction img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: illustration;
+  max-width: 100%;
+}
+
+main .introduction .introduction-content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+  text-align: center;
+}
+
+main .introduction .introduction-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+main .introduction .introduction-content form input {
+  width: 80%;
+  height: 2.5rem;
+  outline: none;
+  margin-bottom: 5px;
+  padding: 15px;
+}
+
+main .introduction .introduction-content form .error-message {
+  font-size: 12px;
+  text-align: left;
+  color: #f06161;
+  display: none;
+}
+
+main .introduction .introduction-content form input.error {
+  border: 1px solid #f06161;
+}
+
+main .introduction .introduction-content form .error-message.error {
+  display: block;
+}
+
+main .introduction .introduction-content form button {
+  margin-top: 15px;
+  color: white;
+  background-color: #3065f8;
+  border-radius: 5px;
+  width: 80%;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main .testimonial {
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "illustration" "content";
+  background-color: #f6f6fe;
+  padding: 100px 25px 80px 25px;
+  color: #070439;
+  position: relative;
+}
+
+main .testimonial img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: illustration;
+  max-width: 100%;
+}
+
+main .testimonial .testimonial-content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .testimonial .testimonial-content h3 {
+  text-align: center;
+}
+
+main .testimonial .testimonial-content .testimonial-one {
+  margin: 25px 0px 15px 0px;
+}
+
+main .testimonial .testimonial-content .testimonial-two {
+  margin-bottom: 25px;
+}
+
+main .testimonial .testimonial-content .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #3c9f8f;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+main .testimonial .testimonial-content .links a {
+  display: inline-block;
+  text-align: center;
+  color: #3c9f8f;
+  font-weight: 500;
+}
+
+main .testimonial .testimonial-content .card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+main .testimonial .testimonial-content .card .remark {
+  margin: 10px 0px 20px 0px;
+}
+
+main .testimonial .testimonial-content .card .identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .testimonial .testimonial-content .card .identity img {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  margin: 0px 10px 0px 0px;
+}
+
+main .testimonial .testimonial-content .card .identity .person .full-name {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+main .testimonial::before {
+  background: url(../images/bg-curve-mobile.svg) no-repeat;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  top: -40px;
+  background-repeat: no-repeat;
+}
+
+main .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  background-color: #585989;
+  padding: 35px 25px 50px 25px;
+}
+
+main .action .action-description p {
+  margin: 25px 0px 25px 0px;
+  text-align: center;
+}
+
+main .action form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+main .action form input {
+  width: 80%;
+  height: 2.5rem;
+  outline: none;
+  margin-bottom: 5px;
+  padding: 15px;
+}
+
+main .action form .error-message {
+  font-size: 12px;
+  text-align: left;
+  display: none;
+}
+
+main .action form input.error {
+  border: 1px solid #f06161;
+}
+
+main .action form .error-message.error {
+  display: block;
+}
+
+main .action form button {
+  margin-top: 15px;
+  color: white;
+  background-color: #3065f8;
+  border-radius: 5px;
+  width: 80%;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  main .introduction {
+        grid-template-areas: "content illustration";
+    margin: 20px 50px 200px 50px;
+    -ms-grid-columns: 1.2fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
+  }
+  main .introduction .introduction-content {
+    text-align: left;
+    padding: 50px 0px 120px 0px;
+    gap: 25px;
+  }
+  main .introduction .introduction-content h2 {
+    font-size: 2.8em;
+  }
+  main .introduction .introduction-content form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main .introduction .introduction-content form input {
+    margin: 0px 15px 0px 0px;
+    width: 40%;
+  }
+  main .introduction .introduction-content form .error-message {
+    position: absolute;
+    bottom: -20px;
+  }
+  main .introduction .introduction-content form button {
+    width: 30%;
+    margin: 0;
+  }
+  main .testimonial {
+        grid-template-areas: "content illustration";
+    padding: 50px 50px 80px 50px;
+    -ms-grid-columns: 1.3fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
+  }
+  main .testimonial .illustration {
+    margin: 30px 15px 30px 15px;
+  }
+  main .testimonial .testimonial-content {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .testimonial .testimonial-content h3 {
+    font-size: 2.8em;
+    text-align: left;
+  }
+  main .testimonial .testimonial-content .testimonial-one, main .testimonial .testimonial-content .testimonial-two {
+    padding-right: 9rem;
+  }
+  main .testimonial .testimonial-content .card {
+    width: 50%;
+  }
+  main .testimonial::before {
+    background: url(../images/bg-curve-desktop.svg) no-repeat;
+    top: -100px;
+  }
+  main .action {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 50px;
+  }
+  main .action .action-description {
+    margin-right: 100px;
+  }
+  main .action .action-description h3 {
+    font-size: 1.5em;
+  }
+  main .action .action-description p {
+    text-align: left;
+  }
+  main .action form {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .action form button {
+    width: 40%;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 20px 30px 20px;
+  background-color: #070439;
+  color: white;
+}
+
+footer img {
+  width: 150px;
+}
+
+footer .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+footer .information .contact {
+  margin-top: 20px;
+}
+
+footer .information .contact .phone, footer .information .contact .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+}
+
+footer .information .contact .phone img, footer .information .contact .email img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+footer .information .sub-menu {
+  margin: 30px 0px 30px 0px;
+}
+
+footer .information .sub-menu p, footer .information .more-info p {
+  margin-top: 10px;
+}
+
+footer .information .more-info {
+  margin-bottom: 30px;
+}
+
+footer .information .sosmed {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .information .sosmed .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+footer .information .sosmed .twt {
+  margin: 0px 15px 0px 15px;
+}
+
+.attribution {
+  background-color: #070439;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer {
+    padding: 80px 50px 50px 50px;
+  }
+  footer .information {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 15px;
+  }
+  footer .information .contact, footer .information .sub-menu, footer .information .more-info, footer .information .sosmed {
+    margin: 0;
+    width: 25%;
+  }
+  footer .information .sosmed {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */

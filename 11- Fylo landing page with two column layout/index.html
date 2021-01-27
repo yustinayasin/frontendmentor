@@ -7,67 +7,155 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  <script src="https://kit.fontawesome.com/4a95053431.js" crossorigin="anonymous"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- header -->
+  <div class="header">
+    <img src="images/logo.svg" alt="logo">
+    <div class="menu">
+      <p>Features</p>
+      <p>Team</p>
+      <p>Sign In</p>
+    </div>
+  </div>
 
-  Features
-  Team
-  Sign In
+  <!-- main -->
+  <main>
+    <div class="introduction">
+      <img src="images/illustration-1.svg" alt="illustration">
+      <div class="introduction-content">
+        <h2>All your files in one secure location, accessible anywhere.</h2>
+        <p>Fylo stores your most important files in one secure location. 
+          Access them wherever you need, share and collaborate with friends, 
+          family, and co-workers.</p>
+        <form class="form-email">
+          <input class="input-email" type="text" placeholder="Enter your email..">
+          <p class="error-message">Please check your email</p>
+          <button type="submit">Get Started</button>
+        </form>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="images/illustration-2.svg" class="illustration" alt="illustration">
+      <div class="testimonial-content">
+        <h3>Stay productive, wherever you are</h3>
+        <p class="testimonial-one">Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.</p>
+        <p class="testimonial-two">Securely share files and folders with friends, family and colleagues for 
+          live collaboration. No email attachments required!</p>
+        <div class="links">
+          <a>See how Fylo works</a>
+          <img src="images/icon-arrow.svg" alt="arrow">
+        </div>
+        <div class="card">
+          <img src="images/icon-quotes.svg" alt="quote">
+          <p class="remark">Fylo has improved our team productivity by an order of magnitude. Since 
+            making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="identity">
+            <img src="images/avatar-testimonial.jpg" alt="avatar">
+            <div class="person">
+              <p class="full-name">Kyle Burton</p>
+              <p class="status">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-description">
+        <h3>Get early access today</h3>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
+          If you have any questions, our support team would be happy to help you.</p>
+      </div>
+      <form class="form-email">
+        <input class="input-email" type="text" placeholder="Enter your email..">
+        <p class="error-message">Please check your email</p>
+        <button type="submit">Get Started</button>
+      </form>
+    </div>
+  </main>
 
-  All your files in one secure location, accessible anywhere.
-
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family, and co-workers.
-
-  Get Started
-
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you 
-  covered for all of your file storage needs.
-
-  Securely share files and folders with friends, family and colleagues for 
-  live collaboration. No email attachments required!
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy
-
+  <!-- footer -->
   <footer>
+    <img src="images/logo.svg" alt="logo">
+    <div class="information">
+      <div class="contact">
+        <div class="phone">
+          <img src="images/icon-phone.svg" alt="phone">
+          <p>Phone: +1-543-123-4567</p>
+        </div>
+        <div class="email">
+          <img src="images/icon-email.svg" alt="email">
+          <p>example@fylo.com</p>
+        </div>
+      </div>
+      <div class="sub-menu">
+        <p>About Us</p>
+        <p>Jobs</p>
+        <p>Press</p>
+        <p>Blog</p>
+      </div>
+      <div class="more-info">
+        <p>Contact Us</p>
+        <p>Terms</p>
+        <p>Privacy</p>
+      </div>
+      <div class="sosmed">
+        <div class="fb container">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="twt container">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="ig container">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="attribution">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/yustinayasin">Yustina Yasin</a>.
     </p>
-  </footer>
+  </div>
+  <script>
+    const forms = document.querySelectorAll(".form-email");
+    
+    console.log(forms);
+
+    forms.forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        parent = e.currentTarget;
+        email = parent.querySelector(".input-email");
+        errorMessage = parent.querySelector(".error-message");
+        if (emailIsValid(email)) {
+          console.log("ha");
+          validEmail(email, errorMessage);
+        } else {
+          console.log("haha");
+          invalidEmail(email, errorMessage);
+        }
+      });
+    });
+
+    function invalidEmail(email, errorMessage) {
+      email.classList.add("error");
+      errorMessage.classList.add("error");
+    }
+
+    function validEmail(email, errorMessage) {
+      email.classList.remove("error");
+      errorMessage.classList.remove("error");
+    }
+
+    function emailIsValid (email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+    }
+  </script>
 </body>
 </html>

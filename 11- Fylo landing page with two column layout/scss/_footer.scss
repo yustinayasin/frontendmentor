@@ -1,0 +1,86 @@
+@import 'mixins';
+
+footer {
+    @include display-flex($align: flex-start);
+    padding: 40px 20px 30px 20px;
+    background-color: $very-dark-blue;
+    color: white;
+
+    img {
+        width: 150px;
+    }
+
+    .information {
+        @include display-flex($align: flex-start);
+        width: 100%;
+
+        .contact {
+            margin-top: 20px;
+
+            .phone, .email {
+                @include display-flex($direction: row, $justify: flex-start);
+                margin-top: 10px;
+
+                img {
+                    width: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .sub-menu {
+            margin: 30px 0px 30px 0px;
+        }
+
+        .sub-menu p, .more-info p {
+            margin-top: 10px;
+        }
+
+        .more-info {
+            margin-bottom: 30px;
+        }
+
+        .sosmed {
+            width: 100%;
+            @include display-flex($direction: row);
+            
+            .container {
+                @include display-flex();
+                width: 25px;
+                height: 25px;
+                border-radius: 20px;
+                border: 1px solid white;
+            }
+
+            .twt {
+                margin: 0px 15px 0px 15px;
+            }
+        }
+    }
+}
+
+.attribution {
+    background-color: $very-dark-blue;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+    footer {
+        padding: 80px 50px 50px 50px;
+
+        .information {
+            flex-direction: row;
+            margin-top: 15px;
+
+            .contact, .sub-menu, .more-info, .sosmed {
+                margin: 0;
+                width: 25%;
+            }
+
+            .sosmed {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

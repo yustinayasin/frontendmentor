@@ -1,0 +1,39 @@
+@import 'mixins';
+// @import 'variables';
+
+
+.header {
+    @include display-flex(space-between, center, row);
+    padding: 15px;
+
+    img {
+        width: 5rem;
+    }
+
+    .menu {
+        width: 50%;
+        @include display-flex(space-between, center, row);
+
+        p {
+            cursor: pointer;
+        }
+
+        p:hover {
+            color: $bright-blue;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header {
+        padding: 50px;
+
+        img {
+            width: 8rem;
+        }
+
+        .menu {
+            width: 25%;
+        }
+    }
+}
