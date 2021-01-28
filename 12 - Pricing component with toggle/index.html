@@ -8,45 +8,85 @@
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <img src="images/bg-top.svg" alt="bg" class="background-top">
+  <img src="images/bg-bottom.svg" alt="bg" class="background-bottom">
+  <!-- header -->
+  <div class="header">
+    <h1>Our Pricing</h1>
+    <div class="toggle">
+      <p class="option">Annually</p>
+      <label class="switch">
+        <input type="checkbox" class="input">
+        <span class="slider"></span>
+      </label>
+      <p class="option">Monthly</p>
+    </div>
+  </div>
 
-  Our Pricing
-  Annually
-  Monthly
+  <!-- main -->
+  <main>
+    <!-- card one -->
+    <div class="card card-one">
+      <p class="title">Basic</p>
+      <ul>
+        <li><h1 class="price">&dollar;19.99</h1></li>
+        <li>500 GB Storage</li>
+        <li>2 Users Allowed</li>
+        <li>Send up to 3 GBe</li>
+      </ul>
+      <button>Learn More</button>
+    </div>
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+    <!-- card two -->
+    <div class="card card-two">
+      <p class="title">Professional</p>
+      <ul>
+        <li><h1 class="price">&dollar;24.99</h1></li>
+        <li>1 TB Storage</li>
+        <li>5 Users Allowed</li>
+        <li>Send up to 10 GB</li>
+      </ul>
+      <button>Learn More</button>
+    </div>
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+    <!-- card three -->
+    <div class="card card-three">
+      <p class="title">Master</p>
+      <ul>
+        <li><h1 class="price">&dollar;39.99</h1></li>
+        <li>2 TB Storage</li>
+        <li>10 Users Allowed</li>
+        <li>Send up to 20 GB</li>
+      </ul>
+      <button>Learn More</button>
+    </div>
+  </main>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/yustinayasin">Yustina Yasin</a>.
   </div>
+
+  <script>
+    const price = {annually: ["&dollar;19.99", "&dollar;24.99", "&dollar;39.99"], monthly: ["&dollar;199.99", "&dollar;249.99", "&dollar;399.99"]};
+
+    const checkbox = document.querySelector('.input');
+    const displayPrices = document.querySelectorAll('ul li:first-child');
+
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        displayPrices.forEach(function(displayPrice, index) {
+          displayPrice.innerHTML = "<h1>"+price.monthly[index]+"</h1>";
+        });
+      } else {
+        displayPrices.forEach(function(displayPrice, index) {
+          displayPrice.innerHTML = "<h1>"+price.annually[index]+"</h1>";
+        });
+      }
+    });
+  </script>
 </body>
 </html>
