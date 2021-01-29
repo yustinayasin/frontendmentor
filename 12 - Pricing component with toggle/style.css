@@ -95,9 +95,8 @@ body {
     transition: .4s;
 }
 
-input:checked + .switch {
-    background-color: var(--gradient-light);
-    background-image: none;
+.switch:hover {
+    opacity: 0.5;
 }
 
 input:checked + .slider {
