@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+    /* color */
+    --pink: hsl(322, 100%, 66%);
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+    /* font size */
+    --font-size-body: 18px;
+    --font-family-headings: 'Poppins', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--very-dark-cyan);
+    font-size: 16px;
+    font-family: var(--font-family-body);
+}
+
+h1, h3, h4 {
+    font-family: var(--font-family-headings);
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.container {
+    background-color: var(--very-pale-cyan);
+}
+
+.header {
+    padding: 2rem 1.2rem;
+    background: url(images/bg-hero-mobile.svg) no-repeat;
+    background-size: 100% 90%;
+    background-position: top left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container img {
+    width: 110px;
+}
+
+.header-container button {
+    background-color: white;
+    outline: none;
+    width: 6.5rem;
+    height: 1.7rem;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 10px 2px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: grid;
+    grid-template-areas: "title" "description" "button" "image";
+    gap: 1.5rem 0;
+    place-items: center center;
+    margin-top: 4.5rem;
+}
+
+.header-content h1 {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.header-content .started {
+    width: 70%;
+    cursor: pointer;
+    height: 2.5rem;
+    background-color: var(--pink);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    margin: 1rem 0;
+    box-shadow: 5px 5px 6px 3px hsla(322, 100%, 66%, 0.2);
+}
+
+.header-content img {
+    width: 100%;
+}
+
+main {
+    padding: 6rem 1rem 8rem 1rem;
+    position: relative;
+}
+
+.card {
+    display: grid;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 2px rgba(189, 189, 189, 0.2);
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "illutration" "title" "content";
+    gap: 1rem 0;
+    place-self: center center;
+    place-items: center center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2.5rem 1.5rem;
+}
+
+.card img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.floating button {
+    width: 70%;
+    cursor: pointer;
+    height: 2.5rem;
+    background-color: var(--pink);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    box-shadow: 5px 5px 6px 3px hsla(322, 100%, 66%, 0.2);
+}
+
+.card:last-of-type {
+    margin-bottom: 0;
+    padding: 2.5rem 5px;
+    width: 90%;
+    grid-template-areas: "title" "button";
+}
+
+.floating {
+    position: absolute;
+    z-index: 1;
+}
+
+footer {
+    background-color: var(--very-dark-cyan);
+    color: white;
+    padding: 7rem 1.5rem 2rem 1.5rem;
+    display: grid;
+    position: relative;
+    grid-template-areas: "logo" "contact" "sub-menu" "sosmed";
+    gap: 1rem 0;
+}
+
+.logo img {
+    width: 200px;
+    position: absolute;
+    left: 0;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 45px;
+}
+
+.logo h2 {
+    z-index: 1;
+}
+
+.contact {
+    display: grid;
+    grid-area: contact;
+    grid-template-areas: 
+        "icon-location content-location"
+        "icon-phone content-phone"
+        "icon-mail content-mail";
+    gap: 1rem 2rem;
+    grid-template-columns: auto;
+    place-items: center start;
+}
+
+.contact img:first-of-type {
+    grid-area: icon-location;
+    align-self: start;
+    padding-top: 5px;
+}
+
+.sub-menu {
+    grid-area: sub-menu;
+    display: grid;
+    gap: 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sosmed {
+    grid-area: sosmed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin: 2.5rem 0 1rem 0; */
+}
+
+.sosmed-container {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sosmed .twt {
+    margin: 0 0.5rem;
+}
+
+.copyright {
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    justify-self: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        padding: 7rem 6rem;
+        background: url(images/bg-hero-desktop.svg) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .header-container img {
+        width: 200px;
+    }
+
+    .header-container button {
+        width: 8.5rem;
+        height: 2.5rem;
+        border-radius: 20px;
+    }
+
+    .header-content {
+        text-align: left;
+        gap: 1.5rem 5rem;
+        margin-top: 7rem;
+        grid-template-columns: 1fr 1.2fr;
+        place-items: center start;
+        grid-template-areas: "title image" "description image" "button image";
+    }
+
+    .header-content p {
+        grid-area: description;
+    }
+
+    .header-content .started {
+        grid-area: button;
+        margin-bottom: 5rem;
+    }
+
+    .header-content img {
+        grid-area: image;
+    }
+
+    .header-content h1 {
+        grid-area: title;
+        font-size: 2em;
+        margin-top: 5rem;
+    }
+
+    main {
+        padding: 8.5rem 6rem;
+    }
+
+    .card {
+        grid-template-areas: "title illustration" "content illustration";
+        gap: 1rem 8rem;
+        text-align: left;
+        grid-template-rows: 0.5fr 0.7fr;
+        padding: 2.5rem 1.5rem 1.5rem 6rem;
+    }
+
+    .card img {
+        grid-area: illustration;
+    }
+
+    .card h3 {
+        grid-area: title;
+        width: 100%;
+        align-self: end;
+        font-size: 1.6rem;
+    }
+
+    .card h4 {
+        font-size: 1.5em;
+    }
+
+    .card p {
+        grid-area: content;
+        align-self: start;
+    }
+
+    .card:last-of-type {
+        width: 40%;
+        text-align: center
+    }
+
+    .floating {
+        bottom: -5rem;
+        left: 30%;
+    }
+
+    footer {
+        padding: 8rem 3rem 5rem 3rem;
+        grid-template-areas: 
+            "logo logo logo logo"
+            "contact sub-menu sub-menu sosmed";
+        grid-template-columns: 2fr 0.5fr 0.5fr 1fr;
+        gap: 1rem 8rem;
+    }
+
+    .contact p:first-of-type {
+        align-self: start;
+    }
+
+    .sub-menu {
+        margin: 0;
+        grid-template-areas: 
+            "about career"
+            "what blog"
+            "faq contact";
+        margin-bottom: 3rem;
+        gap: 1rem 8rem;
+    }
+
+    .sub-menu p:nth-of-type(1) {
+        grid-area: about;
+    }
+    .sub-menu p:nth-of-type(2) {
+        grid-area: what;
+    }
+    .sub-menu p:nth-of-type(3) {
+        grid-area: faq;
+    }
+    .sub-menu p:nth-of-type(4) {
+        grid-area: career;
+    }
+    .sub-menu p:nth-of-type(5) {
+        grid-area: blog;
+    }
+    .sub-menu p:nth-of-type(6) {
+        grid-area: contact;
+    }
+
+    .sosmed {
+        justify-content: flex-start;
+    }
+
+    .copyright {
+        bottom: 2rem;
+        right: 3rem;
+    }
+}
