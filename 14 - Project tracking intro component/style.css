@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 68%);
+    --very-dark-blue: hsl(230, 29%, 20%);
+    --dark-grayish-blue: hsl(230, 11%, 40%);
+    --grayish-blue: hsl(231, 7%, 65%);
+    --light-grayish-blue: hsl(207, 33%, 95%);
+    --font-size: 18px;
+    --font-family-body: 'Barlow', sans-serif;
+    --font-family-headings: 'Barlow Condensed', sans-serif;
+}
+
+*, 
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size);
+    background: url(images/);
+    overflow-x: hidden;
+    position: relative;
+    color: var(--very-dark-blue);
+}
+
+.container {
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+h1, span, button, li {
+    font-family: var(--font-family-headings);
+    text-transform: uppercase;
+}
+
+span, button {
+    font-size: 15px;
+}
+
+.background {
+    position: absolute;
+    width: 50%;
+    height: 52%;
+    background-color: var(--light-grayish-blue);
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-bottom-left-radius: 3.5rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+ul li {
+    list-style: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+ul li:hover {
+    border-bottom: 0.5px solid var(--very-dark-blue);
+}
+
+ul li:last-of-type {
+    color: var(--grayish-blue);
+    margin-bottom: 0;
+}
+
+ul li:last-of-type:hover {
+    border-bottom: 0.5px solid var(--grayish-blue);
+}
+
+ul {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 10px 10px rgba(170, 170, 170, 0.1);
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    /* bottom: -16rem; */
+    z-index: 1;
+    width: 100%;
+    height: 220px;
+    padding: 1.5rem 1.5rem;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+ul .line {
+    /* span itu inline element (ga punya width sama height) jadi harus dikasih display block atau inline block */
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--grayish-blue);
+}
+
+.menu-close {
+    display: none;
+}
+
+.menu-ham, .menu-close {
+    cursor: pointer;
+}
+
+nav .menu.appear {
+    visibility: visible;
+    bottom: -16rem;
+}
+
+.menu-ham.appear {
+    display: none;
+}
+
+.menu-close.appear {
+    display: block;
+}
+
+main {
+    display: grid;
+    gap: 5rem 0;
+    margin-top: 5rem;
+    grid-template-areas: "illustrator" "content";
+    grid-template-rows: 1fr 1fr;
+}
+
+main img {
+    width: 150%;
+    grid-area: illustrator;
+}
+
+main .main__content {
+    grid-area: content;
+}
+
+main span:nth-of-type(2){
+    letter-spacing: 3px;
+    color: var(--grayish-blue);
+}
+
+main span:first-of-type {
+    background-color: var(--very-dark-blue);
+    color: white;
+    font-weight: 700;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-right: 8px;
+}
+
+main span:first-of-type:hover {
+    opacity: 0.7;
+}
+
+main span:last-of-type {
+    color: var(--grayish-blue);
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+p br {
+    display: block;
+}
+
+button {
+    background-color: var(--red);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        padding: 5rem 10rem 5rem 10rem;
+    }
+
+    .menu-ham {
+        display: none;
+    }
+
+    nav .menu {
+        position: static;
+        width: 400px;
+        height: auto;
+        visibility: visible;
+        z-index: 2;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+
+    ul .line {
+        width: 8px;
+        height: 8px;
+        border-radius: 15px;
+    }
+
+    main {
+        grid-template-areas: "content illustrator";
+        gap: 0 2.5rem;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main img {
+        width: 183%;
+    }
+
+    main .main__content {
+        margin-top: 4rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    p {
+        margin: 1.5rem 0 3rem 0;
+    }
+}
