@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+// color
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+// typography
+$font-size-body: 16px;
+$font-family-headings: 'DM Serif Display', serif;
+$font-family-body: 'Karla', sans-serif;
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: $font-size-body;
+}
+
+body {
+    color: $very-dark-violet;
+    font-size: $font-size-body;
+    text-align: center;
+    font-family: $font-family-body;
+
+    h1, h2, h3, h4 {
+        font-family: $font-family-headings;
+        font-weight: 400;
+    }
+
+    button {
+        color: $very-light-gray;
+        background: transparent;
+        border: 1px solid $very-light-gray;
+        height: 2.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    button:hover {
+        color: $dark-violet;
+        background: $very-light-gray;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 1rem;
+
+        .menu-ham {
+            cursor: pointer;
+        }
+
+        .menu-close {
+            display: none;
+        }
+
+        .menu-ham.active {
+            display: none;
+        }
+
+        .menu-close.active {
+            display: block;
+        }
+
+        .menu.active {
+            transform: translateX(0);
+        }
+
+        .menu {
+            position: fixed;
+            background-color: $very-dark-violet;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: 4.5rem;
+            z-index: 1;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            transform: translateX(-100%);
+            transition: 1s ease;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                height: 50%;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            ul li {
+                list-style: none;
+                text-transform: uppercase;
+                color: $very-light-gray;
+                width: 80%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            ul li:hover {
+                border: 1px solid $very-light-gray;
+            }
+
+            img {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .introduction {
+        background-color: $dark-violet;
+        color: $very-light-gray;
+        position: relative;
+
+        .intro-mobile {
+            width: 100%;
+        }
+
+        .content{
+            padding: 4rem 1rem 4.5rem 1rem;
+            background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat;
+            background-position: top left;
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            p {
+                margin: 1rem 0 2rem 0;
+                line-height: 1.5em;
+            }
+
+            button {
+                width: 9.5rem;
+            }
+        }
+        
+        .intro-right-desktop {
+            display: none;
+        }
+
+        .intro-right {
+            position: absolute;
+            width: 8em;
+            right: 0;
+            bottom: -13rem;
+        }
+    }
+
+    main {
+        padding: 7rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .intro-left-desktop {
+            display: none;
+        }
+
+        .intro-desktop {
+            display: none;
+        }
+
+        .line {
+            display: block;
+            width: 50%;
+            height: 1px;
+            background-color: $dark-grayish-violet;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 2rem 0 3rem 0;
+        }
+
+        .content {
+            padding: 0 0.5rem;
+            line-height: 1.5em;
+            display: grid;
+            grid-template-columns: auto;
+            gap: 2.5rem 0;
+            grid-template-areas: "snappy" "prices" "people";
+
+            h2 {
+                margin: 2rem 0 1rem 0;
+            }
+
+            .snappy {
+                grid-area: snappy;
+            }
+
+            .prices {
+                grid-area: prices;
+            }
+
+            .people {
+                grid-area: people;
+            }
+        }
+    }
+
+    .closing {
+        background-color: $dark-violet;
+        color: $very-light-gray;
+
+        .content {
+            background: url(../images/bg-pattern-how-we-work-mobile.svg) no-repeat;
+            background-position: top right;
+            padding: 4rem 1rem;
+
+            h1 {
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+            }
+    
+            button {
+                width: 10rem;
+            }
+        }
+    }
+
+    footer {
+        margin-top: 8rem;
+        background-color: $very-light-gray;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $dark-violet;
+
+
+        .footer__child {
+            padding: 5rem 1rem;
+            background: url(../images/bg-pattern-footer-mobile.svg) no-repeat;
+            background-position: top left;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .logo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .sosmed {
+                    width: 9rem;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 2rem 0 3rem 0;
+        
+                    .fab {
+                        font-size: 1.7em;
+                        color: $dark-grayish-violet;
+                        cursor: pointer;
+                    }
+        
+                    .fab:hover {
+                        color: $dark-violet;
+                    }
+                }
+            }
+    
+            .line {
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $dark-grayish-violet;
+            }
+    
+            .footer__menu {
+                margin-top: 3rem;
+                display: grid;
+                gap: 2.5rem 0;
+                grid-template-areas: "company" "help" "contact" "others";
+    
+                ul li:first-child {
+                    color: $dark-grayish-violet;
+                    margin-bottom: 1.5rem;
+                }
+    
+                .company {
+                    grid-area: company;
+                }
+    
+                .help {
+                    grid-area: help;
+                }
+    
+                .contact {
+                    grid-area: contact;
+                }
+    
+                .others {
+                    grid-area: others;
+                }
+    
+                ul {
+                    display: grid;
+                    gap: 1rem 0;
+                }
+    
+                ul li {
+                    list-style: none;
+                    cursor: pointer;
+                }
+            }
+    
+            .attribution {
+                font-size: 12px;
+                text-transform: none;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        nav {
+            padding: 1.25rem 9rem;
+
+            .menu-ham {
+                display: none;
+            }
+
+            .menu {
+                background-color: transparent;
+                position: static;
+                width: 500px;
+                height: auto;
+                transform: none;
+                letter-spacing: 0.1em;
+
+                img {
+                    display: none;
+                }
+
+                ul {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                ul li {
+                    color: $dark-grayish-violet;
+                    width: auto;
+                    height: auto;
+                    cursor: pointer;
+                }
+
+                ul li:hover {
+                    border: none;
+                    color: $dark-violet;
+                }
+
+                ul li:last-child{
+                    color: $very-dark-violet;
+                    border: 1px solid $very-dark-violet;
+                    width: 150px;
+                    height: 40px;
+                }
+
+                ul li:last-child:hover {
+                    color: $very-light-gray;
+                    background-color: $very-dark-violet;
+                    border: $very-light-gray;
+                }
+            }
+        }
+
+        .introduction {
+            padding: 6rem 9rem;
+            overflow: hidden;
+
+            .line {
+                display: block;
+                height: 1px;
+                width: 150px;
+                background-color: $very-light-gray;
+                margin-bottom: 3rem;
+            }
+
+            .intro-mobile {
+                display: none;
+            }
+
+            .content {
+                padding: 0;
+                width: 47%;
+                text-align: left;
+                background: transparent;
+
+                h1 {
+                    font-size: 4em;
+                    padding-right: 3rem;
+                    line-height: 1em;
+                }
+
+                p {
+                    margin: 2rem 0 2rem 0;
+                }
+            }
+            
+            .intro-right-desktop {
+                overflow: hidden;
+                position: absolute;
+                top: -5rem;
+                right: 0;
+                display: block;
+                z-index: 1;
+                // width: 380px;
+            }
+
+            .intro-right {
+                display: none;
+            }
+        }
+
+        main {
+            padding: 15rem 9rem 7rem 9rem;
+            text-align: left;
+            align-items: flex-start;
+            position: relative;
+
+            .intro-left-desktop {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: -8.5rem;
+                width: 10em;
+            }
+
+            .intro-desktop {
+                display: block;
+                position: absolute;
+                top: -28rem;
+                right: 9rem;
+                width: 500px;
+            }
+
+            .line {
+                width: 150px;
+            }
+
+            h1 {
+                font-size: 4em;
+            }
+
+            .content {
+                grid-template-areas: "snappy prices people";
+                gap: 0 1.5rem;
+            }
+        }
+
+        .closing {
+            margin: 0 9rem;
+            .content {
+                padding: 4rem;
+                background: url(../images/bg-pattern-how-we-work-desktop.svg) no-repeat;
+                background-position: top right;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+                align-items: center;
+
+                h1 {
+                    margin-bottom: 0;
+                    width: 45%;
+                    font-size: 3em;
+                    line-height: 1em;
+                }
+            }
+        }
+
+        footer {
+            .footer__child {
+                padding: 3rem 9rem;
+                background: url(../images/bg-pattern-footer-desktop.svg) no-repeat;
+                background-position: top left;
+
+                .logo {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .footer__menu {
+                    grid-template-areas: "company help contact others";
+                    gap: 0 2.5rem;
+                    text-align: left;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

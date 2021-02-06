@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  color: #2b272f;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+}
+
+body h1, body h2, body h3, body h4 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+body button {
+  color: #fafafa;
+  background: transparent;
+  border: 1px solid #fafafa;
+  height: 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+body button:hover {
+  color: #2d2640;
+  background: #fafafa;
+}
+
+body nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.25rem 1rem;
+}
+
+body nav .menu-ham {
+  cursor: pointer;
+}
+
+body nav .menu-close {
+  display: none;
+}
+
+body nav .menu-ham.active {
+  display: none;
+}
+
+body nav .menu-close.active {
+  display: block;
+}
+
+body nav .menu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+body nav .menu {
+  position: fixed;
+  background-color: #2b272f;
+  width: 100%;
+  height: 90%;
+  left: 0;
+  top: 4.5rem;
+  z-index: 1;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+body nav .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .menu ul li {
+  list-style: none;
+  text-transform: uppercase;
+  color: #fafafa;
+  width: 80%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body nav .menu ul li:hover {
+  border: 1px solid #fafafa;
+}
+
+body nav .menu img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+body .introduction {
+  background-color: #2d2640;
+  color: #fafafa;
+  position: relative;
+}
+
+body .introduction .intro-mobile {
+  width: 100%;
+}
+
+body .introduction .content {
+  padding: 4rem 1rem 4.5rem 1rem;
+  background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat;
+  background-position: top left;
+}
+
+body .introduction .content h1 {
+  font-size: 2.8rem;
+}
+
+body .introduction .content p {
+  margin: 1rem 0 2rem 0;
+  line-height: 1.5em;
+}
+
+body .introduction .content button {
+  width: 9.5rem;
+}
+
+body .introduction .intro-right-desktop {
+  display: none;
+}
+
+body .introduction .intro-right {
+  position: absolute;
+  width: 8em;
+  right: 0;
+  bottom: -13rem;
+}
+
+body main {
+  padding: 7rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .intro-left-desktop {
+  display: none;
+}
+
+body main .intro-desktop {
+  display: none;
+}
+
+body main .line {
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #837d87;
+}
+
+body main h1 {
+  font-size: 2.8rem;
+  margin: 2rem 0 3rem 0;
+}
+
+body main .content {
+  padding: 0 0.5rem;
+  line-height: 1.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  gap: 2.5rem 0;
+      grid-template-areas: "snappy" "prices" "people";
+}
+
+body main .content h2 {
+  margin: 2rem 0 1rem 0;
+}
+
+body main .content .snappy {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: snappy;
+}
+
+body main .content .prices {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: prices;
+}
+
+body main .content .people {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: people;
+}
+
+body .closing {
+  background-color: #2d2640;
+  color: #fafafa;
+}
+
+body .closing .content {
+  background: url(../images/bg-pattern-how-we-work-mobile.svg) no-repeat;
+  background-position: top right;
+  padding: 4rem 1rem;
+}
+
+body .closing .content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+body .closing .content button {
+  width: 10rem;
+}
+
+body footer {
+  margin-top: 8rem;
+  background-color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2d2640;
+}
+
+body footer .footer__child {
+  padding: 5rem 1rem;
+  background: url(../images/bg-pattern-footer-mobile.svg) no-repeat;
+  background-position: top left;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .footer__child .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .footer__child .logo .sosmed {
+  width: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 0 3rem 0;
+}
+
+body footer .footer__child .logo .sosmed .fab {
+  font-size: 1.7em;
+  color: #837d87;
+  cursor: pointer;
+}
+
+body footer .footer__child .logo .sosmed .fab:hover {
+  color: #2d2640;
+}
+
+body footer .footer__child .line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #837d87;
+}
+
+body footer .footer__child .footer__menu {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 2.5rem 0;
+      grid-template-areas: "company" "help" "contact" "others";
+}
+
+body footer .footer__child .footer__menu ul li:first-child {
+  color: #837d87;
+  margin-bottom: 1.5rem;
+}
+
+body footer .footer__child .footer__menu .company {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: company;
+}
+
+body footer .footer__child .footer__menu .help {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: help;
+}
+
+body footer .footer__child .footer__menu .contact {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contact;
+}
+
+body footer .footer__child .footer__menu .others {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: others;
+}
+
+body footer .footer__child .footer__menu ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem 0;
+}
+
+body footer .footer__child .footer__menu ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+body footer .footer__child .attribution {
+  font-size: 12px;
+  text-transform: none;
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  body nav {
+    padding: 1.25rem 9rem;
+  }
+  body nav .menu-ham {
+    display: none;
+  }
+  body nav .menu {
+    background-color: transparent;
+    position: static;
+    width: 500px;
+    height: auto;
+    -webkit-transform: none;
+            transform: none;
+    letter-spacing: 0.1em;
+  }
+  body nav .menu img {
+    display: none;
+  }
+  body nav .menu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body nav .menu ul li {
+    color: #837d87;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+  body nav .menu ul li:hover {
+    border: none;
+    color: #2d2640;
+  }
+  body nav .menu ul li:last-child {
+    color: #2b272f;
+    border: 1px solid #2b272f;
+    width: 150px;
+    height: 40px;
+  }
+  body nav .menu ul li:last-child:hover {
+    color: #fafafa;
+    background-color: #2b272f;
+    border: #fafafa;
+  }
+  body .introduction {
+    padding: 6rem 9rem;
+    overflow: hidden;
+  }
+  body .introduction .line {
+    display: block;
+    height: 1px;
+    width: 150px;
+    background-color: #fafafa;
+    margin-bottom: 3rem;
+  }
+  body .introduction .intro-mobile {
+    display: none;
+  }
+  body .introduction .content {
+    padding: 0;
+    width: 47%;
+    text-align: left;
+    background: transparent;
+  }
+  body .introduction .content h1 {
+    font-size: 4em;
+    padding-right: 3rem;
+    line-height: 1em;
+  }
+  body .introduction .content p {
+    margin: 2rem 0 2rem 0;
+  }
+  body .introduction .intro-right-desktop {
+    overflow: hidden;
+    position: absolute;
+    top: -5rem;
+    right: 0;
+    display: block;
+    z-index: 1;
+  }
+  body .introduction .intro-right {
+    display: none;
+  }
+  body main {
+    padding: 15rem 9rem 7rem 9rem;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  body main .intro-left-desktop {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -8.5rem;
+    width: 10em;
+  }
+  body main .intro-desktop {
+    display: block;
+    position: absolute;
+    top: -28rem;
+    right: 9rem;
+    width: 500px;
+  }
+  body main .line {
+    width: 150px;
+  }
+  body main h1 {
+    font-size: 4em;
+  }
+  body main .content {
+        grid-template-areas: "snappy prices people";
+    gap: 0 1.5rem;
+  }
+  body .closing {
+    margin: 0 9rem;
+  }
+  body .closing .content {
+    padding: 4rem;
+    background: url(../images/bg-pattern-how-we-work-desktop.svg) no-repeat;
+    background-position: top right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .closing .content h1 {
+    margin-bottom: 0;
+    width: 45%;
+    font-size: 3em;
+    line-height: 1em;
+  }
+  body footer .footer__child {
+    padding: 3rem 9rem;
+    background: url(../images/bg-pattern-footer-desktop.svg) no-repeat;
+    background-position: top left;
+  }
+  body footer .footer__child .logo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  body footer .footer__child .footer__menu {
+        grid-template-areas: "company help contact others";
+    gap: 0 2.5rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
