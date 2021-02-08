@@ -86,7 +86,7 @@ body nav .menu {
   height: 90%;
   left: 0;
   top: 4.5rem;
-  z-index: 1;
+  z-index: 3;
   font-weight: 700;
   letter-spacing: 0.2em;
   -webkit-transform: translateX(-100%);
@@ -118,6 +118,7 @@ body nav .menu ul li {
   color: #fafafa;
   width: 80%;
   height: 40px;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,8 +130,19 @@ body nav .menu ul li {
           justify-content: center;
 }
 
-body nav .menu ul li:hover {
+body nav .menu ul li:last-child {
   border: 1px solid #fafafa;
+}
+
+body nav .menu ul li:hover {
+  -webkit-text-decoration: underline solid #fafafa;
+          text-decoration: underline solid #fafafa;
+}
+
+body nav .menu ul li:last-child:hover {
+  text-decoration: none;
+  background-color: #fafafa;
+  color: #2b272f;
 }
 
 body nav .menu img {
@@ -150,10 +162,14 @@ body .introduction .intro-mobile {
   width: 100%;
 }
 
+body .introduction .intro-desktop {
+  display: none;
+}
+
 body .introduction .content {
-  padding: 4rem 1rem 4.5rem 1rem;
-  background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat;
-  background-position: top left;
+  padding: 6rem 1rem 7rem 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 body .introduction .content h1 {
@@ -169,15 +185,26 @@ body .introduction .content button {
   width: 9.5rem;
 }
 
-body .introduction .intro-right-desktop {
-  display: none;
+body .introduction .content::before {
+  content: '';
+  background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat;
+  position: absolute;
+  background-position: top left;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  right: 0;
 }
 
-body .introduction .intro-right {
+body .introduction .content::after {
+  content: '';
+  background: url(../images/bg-pattern-intro-right-mobile.svg) no-repeat;
+  background-position: bottom right;
   position: absolute;
-  width: 8em;
+  width: 100%;
+  height: 100%;
+  bottom: -170px;
   right: 0;
-  bottom: -13rem;
 }
 
 body main {
@@ -192,14 +219,6 @@ body main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body main .intro-left-desktop {
-  display: none;
-}
-
-body main .intro-desktop {
-  display: none;
 }
 
 body main .line {
@@ -255,6 +274,7 @@ body .closing {
 body .closing .content {
   background: url(../images/bg-pattern-how-we-work-mobile.svg) no-repeat;
   background-position: top right;
+  background-size: contain;
   padding: 4rem 1rem;
 }
 
@@ -272,13 +292,14 @@ body footer {
   background-color: #fafafa;
   text-transform: uppercase;
   font-weight: 700;
-  color: #2d2640;
+  color: #2b272f;
 }
 
 body footer .footer__child {
   padding: 5rem 1rem;
   background: url(../images/bg-pattern-footer-mobile.svg) no-repeat;
   background-position: top left;
+  background-size: contain;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,8 +404,13 @@ body footer .footer__child .footer__menu ul {
 }
 
 body footer .footer__child .footer__menu ul li {
-  list-style: none;
   cursor: pointer;
+  list-style: none;
+}
+
+body footer .footer__child .footer__menu li a:hover {
+  -webkit-text-decoration: underline solid #2b272f;
+          text-decoration: underline solid #2b272f;
 }
 
 body footer .footer__child .attribution {
@@ -426,7 +452,6 @@ body footer .footer__child .attribution {
     color: #837d87;
     width: auto;
     height: auto;
-    cursor: pointer;
   }
   body nav .menu ul li:hover {
     border: none;
@@ -444,8 +469,7 @@ body footer .footer__child .attribution {
     border: #fafafa;
   }
   body .introduction {
-    padding: 6rem 9rem;
-    overflow: hidden;
+    padding: 8rem 9rem;
   }
   body .introduction .line {
     display: block;
@@ -456,6 +480,12 @@ body footer .footer__child .attribution {
   }
   body .introduction .intro-mobile {
     display: none;
+  }
+  body .introduction .intro-desktop {
+    display: block;
+    position: absolute;
+    right: 9rem;
+    top: 8rem;
   }
   body .introduction .content {
     padding: 0;
@@ -471,16 +501,29 @@ body footer .footer__child .attribution {
   body .introduction .content p {
     margin: 2rem 0 2rem 0;
   }
-  body .introduction .intro-right-desktop {
-    overflow: hidden;
-    position: absolute;
-    top: -5rem;
-    right: 0;
-    display: block;
-    z-index: 1;
-  }
-  body .introduction .intro-right {
+  body .introduction .content::before, body .introduction .content::after {
     display: none;
+  }
+  body .introduction::after {
+    content: '';
+    background: url(../images/bg-pattern-intro-left-desktop.svg) no-repeat;
+    position: absolute;
+    background-position: top left;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    bottom: -435px;
+  }
+  body .introduction::before {
+    content: '';
+    background: url(../images/bg-pattern-intro-right-desktop.svg) no-repeat;
+    position: absolute;
+    background-position: top -80px right 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
   }
   body main {
     padding: 15rem 9rem 7rem 9rem;
@@ -489,20 +532,6 @@ body footer .footer__child .attribution {
         -ms-flex-align: start;
             align-items: flex-start;
     position: relative;
-  }
-  body main .intro-left-desktop {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -8.5rem;
-    width: 10em;
-  }
-  body main .intro-desktop {
-    display: block;
-    position: absolute;
-    top: -28rem;
-    right: 9rem;
-    width: 500px;
   }
   body main .line {
     width: 150px;
@@ -545,7 +574,6 @@ body footer .footer__child .attribution {
   body footer .footer__child {
     padding: 3rem 9rem;
     background: url(../images/bg-pattern-footer-desktop.svg) no-repeat;
-    background-position: top left;
   }
   body footer .footer__child .logo {
     -webkit-box-orient: horizontal;
