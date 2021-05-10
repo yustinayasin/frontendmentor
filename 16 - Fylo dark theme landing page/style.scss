@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+$color-intro-email: hsl(217, 28%, 15%);
+$color-main: hsl(218, 28%, 13%);
+$color-footer: hsl(216, 53%, 9%);
+$color-testimonials: hsl(219, 30%, 18%);
+$color-inside: hsl(176, 68%, 64%);
+$color-inside-two: hsl(198, 60%, 50%);
+$color-error: hsl(0, 100%, 63%);
+$color-white: hsl(0, 0%, 100%);
+$font-size-body: 14px;
+$font-family-body: 'Open Sans', sans-serif;
+$font-family-heading: 'Raleway', sans-serif;
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: $font-size-body;
+}
+
+body {
+    color: white;
+
+    nav {
+        background-color: $color-intro-email;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 20px;
+
+        img {
+            height: 20px;
+            width: 70px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: $font-family-heading;
+                margin: 0 7px;
+            }
+        }
+    }
+}

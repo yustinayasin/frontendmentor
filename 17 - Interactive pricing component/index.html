@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <h3>Simple, traffic-based pricing</h3>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+
+    <div class="card">
+      <p class="total-views"><span class="pricing-views">100K</span> Pageviews</p>
+      <input type="range" value="2" min="0" max="4" class="slider-range">
+      <p class="budget"><span class="pricing-value">$16.00</span>/month</p>
+      
+      <div class="discount">
+        <span>Monthly Billing</span>
+        <div class="toggle transparent">
+          <input type="checkbox" id="transparent">
+          <label for="transparent" class="toggle-item"></label>
+        </div>
+        <span>Yearly Billing <span class="discount-percent">-25%</span></span>
+      </div>
+
+      <span class="line"></span>
+
+      <ul>
+        <li><img src="images/icon-check.svg" alt="check-icon"> Unlimited websites</li>
+        <li><img src="images/icon-check.svg" alt="check-icon"> 100% data ownership</li>
+        <li><img src="images/icon-check.svg" alt="check-icon">Email reports</li>
+      </ul>
+      <button>Start my trial</button>
+
+    </div>
+  </div>
+
+  <!-- Simple, traffic-based pricing
+  Sign-up for our 30-day trial. No credit card required. 
+
+  Pageviews
+  $ /month
+
+  Monthly Billing
+  Yearly Billing 25% discount
+
+  Unlimited websites
+  100% data ownership
+  Email reports
+
+  Start my trial
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script>
+    const pricing = [8, 12, 16, 24, 36];
+    const views = ["10K", "50K", "100K", "500K", "1M"];
+    const slider = document.querySelector(".slider-range");
+    const displayPricing = document.querySelector(".pricing-value");
+    const displayViews = document.querySelector(".pricing-views");
+    const checkbox = document.getElementById('transparent');
+    const discountPercent = document.querySelector('.discount-percent');
+
+    function discount(){
+      if(checkbox.checked) {
+        displayPricing.innerHTML = `$${pricing[slider.value]*0.25}.00`;
+      } else {
+        displayPricing.innerHTML = `$${pricing[slider.value]}.00`
+      }
+    }
+    slider.oninput = function(){
+      discount();
+      displayViews.innerHTML = `${views[this.value]}`;
+    };
+
+    function trackColor(){
+      let x = (slider.value) * 25;
+      let color =`linear-gradient(90deg, hsl(174, 58%, 57%) ${x}%,  hsl(224, 65%, 95%) ${x}%)`;
+      slider.style.background = color;
+    }
+
+    function checkScreenWidth(){
+      if(window.innerWidth>1024 || document.documentElement.clientWidth>1024) {
+        discountPercent.innerHTML = "25% discount";
+      }
+    }
+
+    // console.log(window.innerWidth);
+    // console.log(document.documentElement.clientWidth);
+
+    slider.addEventListener("mousemove", trackColor);
+    checkbox.addEventListener("click", discount);
+    slider.oninput();
+    checkScreenWidth();
+
+  </script>
+</body>
+</html>
